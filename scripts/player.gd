@@ -54,8 +54,8 @@ func _update_raycast_direction(direction: Vector2) -> void:
  
 func _update_animations(direction: Vector2) -> void:
 	if abs(direction.x) > abs(direction.y):
-		anim.play("Right")
-		anim.flip_h = (direction.x < 0) 
+		anim.play("Left")
+		anim.flip_h = (direction.x > 0) 
 	else:
 		if direction.y < 0:
 			anim.play("Up")

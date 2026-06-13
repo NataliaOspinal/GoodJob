@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnv44x2uf7jtq"]
 
-[ext_resource type="SpriteFrames" uid="uid://h8xg0ixtucyd" path="res://assets/art/ProtaSprite.tres" id="1_3vyb7"]
+[ext_resource type="SpriteFrames" uid="uid://h8xg0ixtucyd" path="res://assets/art/characters/ProtaSprite.tres" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bt1w4m3lbu55u" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
@@ -18,8 +18,7 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1800365062]
 texture_filter = 1
 sprite_frames = ExtResource("1_3vyb7")
-animation = &"Up"
-frame_progress = 0.14907795
+animation = &"Right"
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=514646648]
 target_position = Vector2(0, 10)
