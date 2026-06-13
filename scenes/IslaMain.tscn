@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_6jn6u"]
 [ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_iyc47"]
 [ext_resource type="Texture2D" uid="uid://b74wwfwbfg45g" path="res://icon.svg" id="7_ohx42"]
+[ext_resource type="Script" uid="uid://bmpe34y6r2qp0" path="res://scripts/canvas_layer.gd" id="8_bx55p"]
+[ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="9_lo71r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
 texture = ExtResource("1_m1txm")
@@ -651,11 +653,12 @@ position = Vector2(239, 1019)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1330852922]
 layer = 2
-visible = false
+script = ExtResource("8_bx55p")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1650435317]
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 168.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
@@ -664,22 +667,54 @@ theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=261227191]
 layout_mode = 2
+alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=107806927]
+[node name="TextureRect" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=833399218]
 layout_mode = 2
-texture = ExtResource("7_ohx42")
+texture_normal = ExtResource("7_ohx42")
+stretch_mode = 3
 
-[node name="Control" type="Control" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=2001900237]
+[node name="TextureRect2" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1274541248]
+layout_mode = 2
+texture_normal = ExtResource("7_ohx42")
+
+[node name="SistemaMisiones" type="Control" parent="CanvasLayer/MarginContainer" unique_id=2001900237]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("9_lo71r")
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=817153340]
-layout_mode = 2
-texture = ExtResource("7_ohx42")
+[node name="BotonAbrir" type="TextureButton" parent="CanvasLayer/MarginContainer/SistemaMisiones" unique_id=1222113567]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("7_ohx42")
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1250585228]
-layout_mode = 2
-texture = ExtResource("7_ohx42")
+[node name="CuadroMisiones" type="Panel" parent="CanvasLayer/MarginContainer/SistemaMisiones" unique_id=887017579]
+layout_mode = 0
+offset_right = 267.0
+offset_bottom = 276.0
+
+[node name="BotonCerrar" type="TextureButton" parent="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=2103836198]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 3.0
+offset_right = 264.0
+offset_bottom = 43.0
+texture_normal = ExtResource("7_ohx42")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=132628106]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 56.0
+offset_right = 52.0
+offset_bottom = 96.0
+
+[node name="UITimer" type="Timer" parent="CanvasLayer" unique_id=2132305265]
+wait_time = 3.0
+one_shot = true
+autostart = true
 
 [node name="RutaNPC" type="Path2D" parent="." unique_id=879632981]
 curve = SubResource("Curve2D_iyc47")
@@ -693,3 +728,6 @@ rotates = false
 position = Vector2(-23, 3.9999924)
 rotation = 1.5707964
 type = 1
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
