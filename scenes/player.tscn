@@ -18,4 +18,8 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1800365062]
 texture_filter = 1
 sprite_frames = ExtResource("1_3vyb7")
-animation = &"Idle"
+animation = &"Up"
+frame_progress = 0.14907795
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=514646648]
+target_position = Vector2(0, 10)
