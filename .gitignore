@@ -1,0 +1,14 @@
+# Excluir la carpeta de metadatos y caché de Godot
+.godot/
+
+# Excluir builds automáticas y ejecutables exportados
+*.tmp
+*.data
+/export/
+
+# Archivos de configuración locales de editores (opcional)
+.mono/
+*.csproj
+*.sln
+.vs/
+.vscode/
