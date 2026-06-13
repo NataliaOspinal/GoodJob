@@ -1,7 +1,7 @@
 extends CharacterBody2D
  
 @export var walk_speed: float = 120.0
-@export var run_speed: float = 240.0
+@export var run_speed: float = 160.0
 @export var joystick_threshold: float = 70.0
  
 @onready var raycast: RayCast2D = $RayCast2D
