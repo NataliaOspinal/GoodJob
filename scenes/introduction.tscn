@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://dvmtwjs6k70on"]
+
+[ext_resource type="Script" uid="uid://cwp5j4dq6embw" path="res://scripts/introduction.gd" id="1_tgans"]
+[ext_resource type="Texture2D" uid="uid://3f75jkcb4sbb" path="res://assets/ui/FondoIntro.jpg" id="2_e3kje"]
+[ext_resource type="Texture2D" uid="uid://cyuox0iqfdx6r" path="res://assets/art/Alba1.png" id="2_e7oap"]
+[ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="2_tgans"]
+[ext_resource type="Texture2D" uid="uid://cngu7spmj6uxh" path="res://assets/art/Alba2.png" id="3_k15ss"]
+[ext_resource type="Texture2D" uid="uid://powopyxjvdwa" path="res://assets/ui/FondoQuienEres.png" id="3_nvvsg"]
+
+[node name="Introduction" type="Control" unique_id=613757454]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tgans")
+alba_normal = ExtResource("2_e7oap")
+alba_sorprendida = ExtResource("3_k15ss")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1707530354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e3kje")
+expand_mode = 1
+
+[node name="FondoInteractivo" type="TextureRect" parent="." unique_id=634080508]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nvvsg")
+expand_mode = 1
+
+[node name="Profesor" type="TextureRect" parent="." unique_id=1043325023]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="CVProfesor" type="ColorRect" parent="." unique_id=2006682667]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 124.0
+offset_top = 97.0
+offset_right = 591.0
+offset_bottom = 879.0
+color = Color(0.3541747, 0.76978076, 0.6211822, 1)
+
+[node name="CajaDialogo" parent="." unique_id=715783090 instance=ExtResource("2_tgans")]
+layout_mode = 1
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ContenedorUI" type="Control" parent="." unique_id=195822723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MenuGenero" type="HBoxContainer" parent="ContenedorUI" unique_id=831489914]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="BtnChico" type="Button" parent="ContenedorUI/MenuGenero" unique_id=1269624821]
+layout_mode = 2
+text = "Chico"
+
+[node name="BtnChica" type="Button" parent="ContenedorUI/MenuGenero" unique_id=163129828]
+layout_mode = 2
+text = "Chica"
+
+[node name="MenuNombre" type="VBoxContainer" parent="ContenedorUI" unique_id=2111468178]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="InputNombre" type="LineEdit" parent="ContenedorUI/MenuNombre" unique_id=1284095162]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_length = 12
+
+[node name="BtnConfirmarNombre" type="Button" parent="ContenedorUI/MenuNombre" unique_id=1398353106]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Confirmar"
