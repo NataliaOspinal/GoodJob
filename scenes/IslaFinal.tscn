@@ -7,13 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://csb4m30es3aqa" path="res://assets/art/tiles/Hills.png" id="5_sjum7"]
 [ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_bwcjt"]
 [ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_h3pq8"]
-[ext_resource type="Script" uid="uid://bmpe34y6r2qp0" path="res://scripts/canvas_layer.gd" id="8_nsamb"]
-[ext_resource type="Texture2D" uid="uid://dtcm5wmgam5dj" path="res://assets/ui/cv icono.png" id="9_nr86g"]
-[ext_resource type="Texture2D" uid="uid://dx7mo2ysboedx" path="res://assets/ui/mapa icono.png" id="10_tmgoh"]
-[ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="11_e3rl7"]
-[ext_resource type="Texture2D" uid="uid://dn1lhne4o34aq" path="res://assets/ui/misiones.png" id="12_043xn"]
-[ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_3dt0j"]
-[ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="14_5lmxj"]
+[ext_resource type="PackedScene" uid="uid://1wnndddtrrir" path="res://scenes/CanvasLayer.tscn" id="8_qm1f3"]
 [ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_t038d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
@@ -674,83 +668,7 @@ limit_bottom = 1390
 [node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_h3pq8")]
 position = Vector2(239, 1019)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1330852922 groups=["Interfaz"]]
-layer = 2
-script = ExtResource("8_nsamb")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1650435317]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 168.0
-grow_horizontal = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=261227191]
-layout_mode = 2
-alignment = 2
-
-[node name="TextureRect" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=833399218]
-layout_mode = 2
-texture_normal = ExtResource("9_nr86g")
-stretch_mode = 3
-
-[node name="TextureRect2" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1274541248]
-layout_mode = 2
-texture_normal = ExtResource("10_tmgoh")
-
-[node name="SistemaMisiones" type="Control" parent="CanvasLayer/MarginContainer" unique_id=2001900237]
-layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("11_e3rl7")
-
-[node name="BotonAbrir" type="TextureButton" parent="CanvasLayer/MarginContainer/SistemaMisiones" unique_id=1222113567]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("12_043xn")
-
-[node name="CuadroMisiones" type="Panel" parent="CanvasLayer/MarginContainer/SistemaMisiones" unique_id=887017579]
-layout_mode = 0
-offset_right = 267.0
-offset_bottom = 276.0
-
-[node name="BotonCerrar" type="TextureButton" parent="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=2103836198]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 8.0
-offset_right = 259.0
-offset_bottom = 78.0
-texture_normal = ExtResource("13_3dt0j")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=132628106]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 89.0
-offset_right = 257.0
-offset_bottom = 259.0
-
-[node name="UITimer" type="Timer" parent="CanvasLayer" unique_id=2132305265]
-wait_time = 3.0
-one_shot = true
-autostart = true
-
-[node name="CajaDialogo" parent="CanvasLayer" unique_id=715783090 instance=ExtResource("14_5lmxj")]
-visible = false
-anchors_preset = -1
-anchor_left = 0.013888889
-anchor_top = 0.640625
-anchor_right = 0.9861111
-anchor_bottom = 0.7828115
-offset_left = 0.0
-offset_top = 258.0
-offset_right = 0.0
-offset_bottom = 258.0
-metadata/_edit_use_anchors_ = true
+[node name="CanvasLayer" parent="." unique_id=170823451 instance=ExtResource("8_qm1f3")]
 
 [node name="RutaNPC" type="Path2D" parent="." unique_id=879632981]
 curve = SubResource("Curve2D_iyc47")
@@ -762,8 +680,3 @@ rotates = false
 [node name="NpcIsle" parent="RutaNPC/PathFollow2D" unique_id=2079635334 instance=ExtResource("7_h3pq8")]
 type = 1
 datos = ExtResource("15_t038d")
-
-[connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
-[connection signal="timeout" from="CanvasLayer/UITimer" to="CanvasLayer" method="_ocultar_ui"]
-[connection signal="avanzar_dialogo" from="CanvasLayer/CajaDialogo" to="CanvasLayer" method="_siguiente_linea"]

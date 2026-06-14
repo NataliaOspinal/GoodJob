@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var ui_timer: Timer = $UITimer
 @onready var margin_container: MarginContainer = $MarginContainer 
 @onready var caja_dialogo: Panel = $CajaDialogo
+@onready var boton_cv: TextureButton = $MarginContainer/HBoxContainer/BotonCV
+@onready var pantalla_cv = $PantallaCv
 
 var emisor_actual: Node = null
 var dialogo_actual: Array[String] = []
@@ -13,6 +15,7 @@ func _ready() -> void:
 	# Área superior es el tercio de arriba de la pantalla (1280 / 3)
 	touch_area_y_end = get_viewport().get_visible_rect().size.y / 3.0
 	caja_dialogo.hide()
+	boton_cv.pressed.connect(_al_presionar_boton_cv)
 	
 func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
 	if lineas.size() == 0: 
@@ -61,3 +64,7 @@ func _ocultar_ui() -> void:
 	tween.tween_property(margin_container, "modulate:a", 0.0, 0.5)
 	# Ocultar de verdad
 	tween.tween_callback(margin_container.hide)
+	
+func _al_presionar_boton_cv() -> void:
+	print("¡El botón detectó el clic!")
+	pantalla_cv.mostrar_cv()

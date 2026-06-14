@@ -4,7 +4,9 @@ var genero_jugador: String = ""
 var nombre_jugador: String = ""
 var carrera_jugador: String = ""
 var especializacion_jugador: String = ""
-
+var cv_soft_skills_desbloqueado: bool = false
+var cv_tech_skills_desbloqueado: bool = false
+var habilidades_desbloqueadas: String = ""
 var npcs_atrapados: int = 0
 var meta_npcs: int = 0
 var juego_atrapados_activo: bool = false
