@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cubc5ohb220re"]
+
+[ext_resource type="Script" uid="uid://tyqjn6q4d2lc" path="res://scripts/portal_bote.gd" id="1_ym72i"]
+[ext_resource type="Texture2D" uid="uid://bc3kj8wam0eox" path="res://assets/art/characters/Bote.png" id="2_feypl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o87ba"]
+size = Vector2(38, 54)
+
+[node name="PortalBote" type="Area2D" unique_id=1658521969]
+script = ExtResource("1_ym72i")
+ruta_overworld = "uid://8ao6nyqtwf74"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2006893169]
+position = Vector2(3, 5)
+texture = ExtResource("2_feypl")
+hframes = 4
+vframes = 2
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669920018]
+position = Vector2(9, 6)
+shape = SubResource("RectangleShape2D_o87ba")
+
+[connection signal="body_entered" from="." to="." method="_al_entrar_al_bote"]

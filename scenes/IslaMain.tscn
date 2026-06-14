@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="12_crwti"]
 [ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_1b3s5"]
 [ext_resource type="Texture2D" uid="uid://balkg53mxeojl" path="res://assets/art/tiles/EDIFICIO UTP.png" id="16_1b3s5"]
+[ext_resource type="PackedScene" uid="uid://cubc5ohb220re" path="res://scenes/boteIsla.tscn" id="17_17x8p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohx42"]
 texture = ExtResource("4_lo71r")
@@ -1599,6 +1600,9 @@ offset = Vector2(0, -120)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1359965993]
 position = Vector2(0, -3)
 polygon = PackedVector2Array(297, 754, 297, 664, 488, 665, 489, 753, 473, 753, 473, 763, 451, 763, 451, 754, 434, 754, 434, 765, 424, 765, 424, 773, 414, 773, 413, 768, 370, 769, 370, 774, 360, 774, 360, 767, 351, 767, 351, 754, 335, 754, 335, 762, 307, 762, 307, 754)
+
+[node name="PortalBote" parent="." unique_id=1658521969 instance=ExtResource("17_17x8p")]
+position = Vector2(18, 1214)
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]

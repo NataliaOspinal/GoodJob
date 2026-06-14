@@ -1,23 +1,23 @@
-[gd_scene format=4 uid="uid://6cs72o8rtqoj"]
+[gd_scene format=4 uid="uid://qi7ncsyf8feg"]
 
-[ext_resource type="Texture2D" uid="uid://cf0nnibr7sb8q" path="res://assets/art/tiles/Grass.png" id="1_nar16"]
-[ext_resource type="Texture2D" uid="uid://bevnvvsyk8qhf" path="res://assets/art/tiles/Tilled_Dirt.png" id="2_6lkqv"]
-[ext_resource type="Texture2D" uid="uid://b6a6lke7xh3ay" path="res://assets/art/tiles/Water.png" id="3_7wiam"]
-[ext_resource type="Texture2D" uid="uid://fmi6phxn0fps" path="res://assets/art/tiles/Wooden House.png" id="4_o1vou"]
-[ext_resource type="Texture2D" uid="uid://csb4m30es3aqa" path="res://assets/art/tiles/Hills.png" id="5_wsjni"]
-[ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_4hg0a"]
-[ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_f1m12"]
-[ext_resource type="Script" uid="uid://bmpe34y6r2qp0" path="res://scripts/canvas_layer.gd" id="8_08m01"]
-[ext_resource type="Texture2D" uid="uid://dtcm5wmgam5dj" path="res://assets/ui/cv icono.png" id="9_mlfws"]
-[ext_resource type="Texture2D" uid="uid://dx7mo2ysboedx" path="res://assets/ui/mapa icono.png" id="10_muoeo"]
-[ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="11_jgvbx"]
-[ext_resource type="Texture2D" uid="uid://dn1lhne4o34aq" path="res://assets/ui/misiones.png" id="12_dqslm"]
-[ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_0fm2a"]
-[ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="14_q2ukl"]
-[ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_hf1pw"]
+[ext_resource type="Texture2D" uid="uid://cf0nnibr7sb8q" path="res://assets/art/tiles/Grass.png" id="1_avyyk"]
+[ext_resource type="Texture2D" uid="uid://bevnvvsyk8qhf" path="res://assets/art/tiles/Tilled_Dirt.png" id="2_hf22a"]
+[ext_resource type="Texture2D" uid="uid://b6a6lke7xh3ay" path="res://assets/art/tiles/Water.png" id="3_oun86"]
+[ext_resource type="Texture2D" uid="uid://fmi6phxn0fps" path="res://assets/art/tiles/Wooden House.png" id="4_nni6j"]
+[ext_resource type="Texture2D" uid="uid://csb4m30es3aqa" path="res://assets/art/tiles/Hills.png" id="5_7jbsl"]
+[ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_switq"]
+[ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_gkth8"]
+[ext_resource type="Script" uid="uid://bmpe34y6r2qp0" path="res://scripts/canvas_layer.gd" id="8_grh3j"]
+[ext_resource type="Texture2D" uid="uid://dtcm5wmgam5dj" path="res://assets/ui/cv icono.png" id="9_hkco1"]
+[ext_resource type="Texture2D" uid="uid://dx7mo2ysboedx" path="res://assets/ui/mapa icono.png" id="10_pry1m"]
+[ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="11_rvhbn"]
+[ext_resource type="Texture2D" uid="uid://dn1lhne4o34aq" path="res://assets/ui/misiones.png" id="12_gwiut"]
+[ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_rk720"]
+[ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="14_tan88"]
+[ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_1lkvi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
-texture = ExtResource("1_nar16")
+texture = ExtResource("1_avyyk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -91,7 +91,7 @@ texture = ExtResource("1_nar16")
 8:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnbag"]
-texture = ExtResource("2_6lkqv")
+texture = ExtResource("2_hf22a")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -164,7 +164,7 @@ texture = ExtResource("2_6lkqv")
 9:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01cgb"]
-texture = ExtResource("3_7wiam")
+texture = ExtResource("3_oun86")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -174,7 +174,7 @@ texture = ExtResource("3_7wiam")
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22sk6"]
-texture = ExtResource("4_o1vou")
+texture = ExtResource("4_nni6j")
 1:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -207,7 +207,7 @@ texture = ExtResource("4_o1vou")
 6:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1b3s5"]
-texture = ExtResource("5_wsjni")
+texture = ExtResource("5_7jbsl")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -303,7 +303,7 @@ sources/3 = SubResource("TileSetAtlasSource_22sk6")
 sources/4 = SubResource("TileSetAtlasSource_1b3s5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o87ba"]
-texture = ExtResource("1_nar16")
+texture = ExtResource("1_avyyk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -383,7 +383,7 @@ texture = ExtResource("1_nar16")
 10:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j06gy"]
-texture = ExtResource("5_wsjni")
+texture = ExtResource("5_7jbsl")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -471,7 +471,7 @@ texture = ExtResource("5_wsjni")
 7:8/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvsgo"]
-texture = ExtResource("2_6lkqv")
+texture = ExtResource("2_hf22a")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -544,7 +544,7 @@ texture = ExtResource("2_6lkqv")
 9:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1g5w1"]
-texture = ExtResource("4_o1vou")
+texture = ExtResource("4_nni6j")
 1:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -583,7 +583,7 @@ sources/2 = SubResource("TileSetAtlasSource_gvsgo")
 sources/3 = SubResource("TileSetAtlasSource_1g5w1")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohx42"]
-texture = ExtResource("4_o1vou")
+texture = ExtResource("4_nni6j")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
@@ -656,9 +656,10 @@ tile_set = SubResource("TileSet_iyc47")
 
 [node name="5Techos" type="TileMapLayer" parent="." unique_id=911339862]
 z_index = 10
+tile_map_data = PackedByteArray("AAAOAD8AAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_iyc47")
 
-[node name="Player" parent="." unique_id=1371327339 instance=ExtResource("6_4hg0a")]
+[node name="Player" parent="." unique_id=1371327339 instance=ExtResource("6_switq")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(130, 1093)
@@ -670,12 +671,12 @@ limit_top = 0
 limit_right = 873
 limit_bottom = 1390
 
-[node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_f1m12")]
+[node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_gkth8")]
 position = Vector2(239, 1019)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1330852922 groups=["Interfaz"]]
 layer = 2
-script = ExtResource("8_08m01")
+script = ExtResource("8_grh3j")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1650435317]
 anchors_preset = 10
@@ -693,23 +694,23 @@ alignment = 2
 
 [node name="TextureRect" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=833399218]
 layout_mode = 2
-texture_normal = ExtResource("9_mlfws")
+texture_normal = ExtResource("9_hkco1")
 stretch_mode = 3
 
 [node name="TextureRect2" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1274541248]
 layout_mode = 2
-texture_normal = ExtResource("10_muoeo")
+texture_normal = ExtResource("10_pry1m")
 
 [node name="SistemaMisiones" type="Control" parent="CanvasLayer/MarginContainer" unique_id=2001900237]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("11_jgvbx")
+script = ExtResource("11_rvhbn")
 
 [node name="BotonAbrir" type="TextureButton" parent="CanvasLayer/MarginContainer/SistemaMisiones" unique_id=1222113567]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture_normal = ExtResource("12_dqslm")
+texture_normal = ExtResource("12_gwiut")
 
 [node name="CuadroMisiones" type="Panel" parent="CanvasLayer/MarginContainer/SistemaMisiones" unique_id=887017579]
 layout_mode = 0
@@ -722,7 +723,7 @@ offset_left = 189.0
 offset_top = 8.0
 offset_right = 259.0
 offset_bottom = 78.0
-texture_normal = ExtResource("13_0fm2a")
+texture_normal = ExtResource("13_rk720")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -738,7 +739,7 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="CajaDialogo" parent="CanvasLayer" unique_id=715783090 instance=ExtResource("14_q2ukl")]
+[node name="CajaDialogo" parent="CanvasLayer" unique_id=715783090 instance=ExtResource("14_tan88")]
 visible = false
 anchors_preset = -1
 anchor_left = 0.013888889
@@ -758,9 +759,9 @@ curve = SubResource("Curve2D_iyc47")
 position = Vector2(103, 1122)
 rotates = false
 
-[node name="NpcIsle" parent="RutaNPC/PathFollow2D" unique_id=2079635334 instance=ExtResource("7_f1m12")]
+[node name="NpcIsle" parent="RutaNPC/PathFollow2D" unique_id=2079635334 instance=ExtResource("7_gkth8")]
 type = 1
-datos = ExtResource("15_hf1pw")
+datos = ExtResource("15_1lkvi")
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
