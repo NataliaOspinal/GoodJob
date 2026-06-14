@@ -573,6 +573,36 @@ shape = SubResource("CircleShape2D_gacct")
 [node name="PuntoAparicion" type="Marker2D" parent="PortalIslaMain" unique_id=357123987]
 position = Vector2(0, 122)
 
+[node name="PortalIslaMain2" type="Area2D" parent="." unique_id=431301022 node_paths=PackedStringArray("punto_aparicion")]
+position = Vector2(797, 570)
+script = ExtResource("3_gacct")
+ruta_destino = "uid://6cs72o8rtqoj"
+punto_aparicion = NodePath("PuntoAparicion")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalIslaMain2" unique_id=1795826545]
+texture = ExtResource("3_puia7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalIslaMain2" unique_id=1905428017]
+shape = SubResource("CircleShape2D_gacct")
+
+[node name="PuntoAparicion" type="Marker2D" parent="PortalIslaMain2" unique_id=568526309]
+position = Vector2(0, 122)
+
+[node name="PortalIslaMain3" type="Area2D" parent="." unique_id=1268074458 node_paths=PackedStringArray("punto_aparicion")]
+position = Vector2(1196, 860)
+script = ExtResource("3_gacct")
+ruta_destino = "uid://fxwk7x65eosu"
+punto_aparicion = NodePath("PuntoAparicion")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalIslaMain3" unique_id=344124509]
+texture = ExtResource("3_puia7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalIslaMain3" unique_id=1549703198]
+shape = SubResource("CircleShape2D_gacct")
+
+[node name="PuntoAparicion" type="Marker2D" parent="PortalIslaMain3" unique_id=1389816917]
+position = Vector2(0, 122)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2066487963 groups=["Interfaz"]]
 layer = 2
 script = ExtResource("6_ff6um")
@@ -652,6 +682,8 @@ offset_bottom = 258.0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="PortalIslaMain" to="PortalIslaMain" method="_al_entrar_a_la_isla"]
+[connection signal="body_entered" from="PortalIslaMain2" to="PortalIslaMain2" method="_al_entrar_a_la_isla"]
+[connection signal="body_entered" from="PortalIslaMain3" to="PortalIslaMain3" method="_al_entrar_a_la_isla"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
 [connection signal="timeout" from="CanvasLayer/UITimer" to="CanvasLayer" method="_ocultar_ui"]

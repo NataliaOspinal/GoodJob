@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_hf1pw"]
 [ext_resource type="PackedScene" uid="uid://dye5gvmqu2m4a" path="res://scenes/Folder.tscn" id="19_o1vou"]
 [ext_resource type="SpriteFrames" uid="uid://bae0bw7hagled" path="res://assets/art/npcs/NPCMorada.tres" id="21_4hg0a"]
+[ext_resource type="PackedScene" uid="uid://cubc5ohb220re" path="res://scenes/boteIsla.tscn" id="22_f1m12"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
 texture = ExtResource("1_nar16")
@@ -778,6 +779,9 @@ frames_animados = ExtResource("21_4hg0a")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=244953546]
 position = Vector2(392, 919)
+
+[node name="PortalBote" parent="." unique_id=1658521969 instance=ExtResource("22_f1m12")]
+position = Vector2(34, 1182)
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]

@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_rk720"]
 [ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="14_tan88"]
 [ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_1lkvi"]
+[ext_resource type="PackedScene" uid="uid://cubc5ohb220re" path="res://scenes/boteIsla.tscn" id="20_switq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
 texture = ExtResource("1_avyyk")
@@ -775,6 +776,9 @@ offset_top = 258.0
 offset_right = 0.0
 offset_bottom = 258.0
 metadata/_edit_use_anchors_ = true
+
+[node name="PortalBote" parent="." unique_id=1658521969 instance=ExtResource("20_switq")]
+position = Vector2(36, 1181)
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
