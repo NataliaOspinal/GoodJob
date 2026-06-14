@@ -4,31 +4,39 @@ extends CanvasLayer
 @onready var margin_container: MarginContainer = $MarginContainer 
 @onready var caja_dialogo: Panel = $CajaDialogo
 
+@onready var audio_dialogo: AudioStreamPlayer = $AudioDialogo 
+
 var emisor_actual: Node = null
 var dialogo_actual: Array[String] = []
 var indice_dialogo: int = 0
 var touch_area_y_end: float = 0.0
 
 func _ready() -> void:
-	# Área superior es el tercio de arriba de la pantalla (1280 / 3)
 	touch_area_y_end = get_viewport().get_visible_rect().size.y / 3.0
 	caja_dialogo.hide()
 	
+
 func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
 	if lineas.size() == 0: 
 		return
 	
 	dialogo_actual = lineas
 	indice_dialogo = 0
-	emisor_actual = emisor_nodo # Guardamos al NPC en la memoria de la UI
+	emisor_actual = emisor_nodo 
 	
 	caja_dialogo.show()
 	caja_dialogo.mostrar_texto(dialogo_actual[indice_dialogo])
+	
+	if audio_dialogo.stream: 
+		audio_dialogo.play() 
 	
 func _siguiente_linea() -> void:
 	indice_dialogo += 1
 	if indice_dialogo < dialogo_actual.size():
 		caja_dialogo.mostrar_texto(dialogo_actual[indice_dialogo])
+		
+		if audio_dialogo.stream: 
+			audio_dialogo.play()
 	else:
 		caja_dialogo.hide()
 
@@ -45,19 +53,14 @@ func _unhandled_input(event: InputEvent) -> void:
 func _mostrar_ui() -> void:
 	ui_timer.start() 
 	
-	# Si ya está completamente visible, no se hace nada
 	if margin_container.visible and margin_container.modulate.a >= 0.95:
 		return
 		
-	# Si está oculta o haciendo el fade-out de bajada, hacemos el fade-in
 	margin_container.show()
 	var tween = create_tween()
 	tween.tween_property(margin_container, "modulate:a", 1.0, 0.3)
 
 func _ocultar_ui() -> void:
-	# Tween para el Fade-out
 	var tween = create_tween()
-	# Transparencia en 0.5 segundos
 	tween.tween_property(margin_container, "modulate:a", 0.0, 0.5)
-	# Ocultar de verdad
 	tween.tween_callback(margin_container.hide)

@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b6ug3llgj4se5" path="res://assets/art/nestor.png" id="2_pv3tx"]
 [ext_resource type="Texture2D" uid="uid://fmi6phxn0fps" path="res://assets/art/tiles/Wooden House.png" id="4_35uec"]
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="5_hogs0"]
+[ext_resource type="SpriteFrames" uid="uid://bae0bw7hagled" path="res://assets/art/npcs/NPCMorada.tres" id="5_vocr7"]
 [ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_bwcjt"]
 [ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_h3pq8"]
 [ext_resource type="Script" uid="uid://bmpe34y6r2qp0" path="res://scripts/canvas_layer.gd" id="8_nsamb"]
@@ -9,9 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://dx7mo2ysboedx" path="res://assets/ui/mapa icono.png" id="10_tmgoh"]
 [ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="11_e3rl7"]
 [ext_resource type="Texture2D" uid="uid://dn1lhne4o34aq" path="res://assets/ui/misiones.png" id="12_043xn"]
+[ext_resource type="AudioStream" uid="uid://hsv6wvdgaq23" path="res://assets/music/sounds/Ok.wav" id="12_vocr7"]
 [ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_3dt0j"]
 [ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="14_5lmxj"]
-[ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_t038d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohx42"]
 texture = ExtResource("4_35uec")
@@ -732,11 +734,14 @@ texture = ExtResource("4_35uec")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_a1jcn")
 
-[sub_resource type="Curve2D" id="Curve2D_iyc47"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 103, 1122, 0, 0, 0, 0, 103, 1031, 0, 0, 0, 0, 200, 1031)
-}
-point_count = 3
+[sub_resource type="Resource" id="Resource_pv3tx"]
+script = ExtResource("5_hogs0")
+nombre_npc = "A.I.D.A"
+dialogos_fase_1 = Array[String](["Iniciando sistema A.I.D.A...", "Escaneando currículum del candidato...", "Datos procesados.", "Has adquirido sólidas habilidades blandas y técnicas.", "Match del 98% encontrado", "Perfil óptimo para Analista de Marketing Retail.", "Tu ruta de empleabilidad ha sido completada con éxito.", "Estás listo para la industria.", "¡Felicidades y gracias por jugar!"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hogs0"]
+load_path = "res://.godot/imported/PC.png-063baaf95b57042a4f929685531ffb4a.ctex"
 
 [node name="IslaBahiaAnalitica" type="Node2D" unique_id=694703998]
 y_sort_enabled = true
@@ -774,7 +779,14 @@ limit_right = 873
 limit_bottom = 1390
 
 [node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_h3pq8")]
-position = Vector2(239, 1019)
+position = Vector2(391, 811)
+datos = SubResource("Resource_pv3tx")
+usar_estatico = true
+textura_estatica = SubResource("CompressedTexture2D_hogs0")
+
+[node name="AnimatedSprite2D" parent="NpcIsle2" index="1" unique_id=1133498093]
+sprite_frames = ExtResource("5_vocr7")
+animation = &"Down"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1330852922 groups=["Interfaz"]]
 layer = 2
@@ -854,18 +866,13 @@ offset_right = 0.0
 offset_bottom = 258.0
 metadata/_edit_use_anchors_ = true
 
-[node name="RutaNPC" type="Path2D" parent="." unique_id=879632981]
-curve = SubResource("Curve2D_iyc47")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="RutaNPC" unique_id=1503435985]
-position = Vector2(103, 1122)
-rotates = false
-
-[node name="NpcIsle" parent="RutaNPC/PathFollow2D" unique_id=2079635334 instance=ExtResource("7_h3pq8")]
-type = 1
-datos = ExtResource("15_t038d")
+[node name="AudioDialogo" type="AudioStreamPlayer" parent="CanvasLayer" unique_id=854536681]
+stream = ExtResource("12_vocr7")
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
 [connection signal="timeout" from="CanvasLayer/UITimer" to="CanvasLayer" method="_ocultar_ui"]
 [connection signal="avanzar_dialogo" from="CanvasLayer/CajaDialogo" to="CanvasLayer" method="_siguiente_linea"]
+
+[editable path="NpcIsle2"]
+[editable path="CanvasLayer/CajaDialogo"]

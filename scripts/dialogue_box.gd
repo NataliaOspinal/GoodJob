@@ -29,6 +29,9 @@ func mostrar_texto(nuevo_texto: String) -> void:
 	en_pausa_puntuacion = false
 	flecha.visible = false
 	timer_letras.start()
+	
+	if audio_tap.stream:
+		audio_tap.play()
 
 func _on_timer_letras_timeout() -> void:
 	if texto.visible_characters < texto.get_total_character_count():
