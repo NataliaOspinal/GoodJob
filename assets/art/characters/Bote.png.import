@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bchjmrn2rd0g6"
-path="res://.godot/imported/ProtaSprite.png-7bd81ddd62016381118d6a29162768a2.ctex"
+uid="uid://bc3kj8wam0eox"
+path="res://.godot/imported/Bote.png-fbc4c9f6cf2c3b08a83e4c3e73cf0164.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/characters/ProtaSprite.png"
-dest_files=["res://.godot/imported/ProtaSprite.png-7bd81ddd62016381118d6a29162768a2.ctex"]
+source_file="res://assets/art/characters/Bote.png"
+dest_files=["res://.godot/imported/Bote.png-fbc4c9f6cf2c3b08a83e4c3e73cf0164.ctex"]
 
 [params]
 

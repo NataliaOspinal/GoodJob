@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="12_crwti"]
 [ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_1b3s5"]
 [ext_resource type="Texture2D" uid="uid://balkg53mxeojl" path="res://assets/art/tiles/EDIFICIO UTP.png" id="16_1b3s5"]
+[ext_resource type="Script" uid="uid://tyqjn6q4d2lc" path="res://scripts/portal_bote.gd" id="17_17x8p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
 texture = ExtResource("1_m1txm")
@@ -637,6 +638,9 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o87ba"]
+size = Vector2(38, 54)
+
 [node name="IslaMain" type="Node2D" unique_id=694703998]
 y_sort_enabled = true
 
@@ -779,7 +783,19 @@ offset = Vector2(0, -120)
 position = Vector2(0, -3)
 polygon = PackedVector2Array(297, 754, 297, 664, 488, 665, 489, 753, 473, 753, 473, 763, 451, 763, 451, 754, 434, 754, 434, 765, 424, 765, 424, 773, 414, 773, 413, 768, 370, 769, 370, 774, 360, 774, 360, 767, 351, 767, 351, 754, 335, 754, 335, 762, 307, 762, 307, 754)
 
+[node name="PortalBote" type="Area2D" parent="." unique_id=1049835598]
+position = Vector2(17, 1214)
+script = ExtResource("17_17x8p")
+ruta_overworld = "uid://8ao6nyqtwf74"
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalBote" unique_id=1616583493]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalBote" unique_id=899785675]
+position = Vector2(9, 6)
+shape = SubResource("RectangleShape2D_o87ba")
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/BotonAbrir" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="CanvasLayer/MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
 [connection signal="timeout" from="CanvasLayer/UITimer" to="CanvasLayer" method="_ocultar_ui"]
 [connection signal="avanzar_dialogo" from="CanvasLayer/CajaDialogo" to="CanvasLayer" method="_siguiente_linea"]
+[connection signal="body_entered" from="PortalBote" to="PortalBote" method="_al_entrar_al_bote"]
