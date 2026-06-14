@@ -668,10 +668,10 @@ position = Vector2(130, 1093)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=865684493]
 zoom = Vector2(4, 4)
-limit_left = 0
+limit_left = -174
 limit_top = 0
-limit_right = 720
-limit_bottom = 1280
+limit_right = 873
+limit_bottom = 1390
 
 [node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_iyc47")]
 position = Vector2(239, 1019)
