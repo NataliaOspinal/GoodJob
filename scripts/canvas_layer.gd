@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var margin_container: MarginContainer = $MarginContainer 
 @onready var caja_dialogo: Panel = $CajaDialogo
 
+var emisor_actual: Node = null
 var dialogo_actual: Array[String] = []
 var indice_dialogo: int = 0
 var touch_area_y_end: float = 0.0
@@ -12,24 +13,29 @@ func _ready() -> void:
 	# Área superior es el tercio de arriba de la pantalla (1280 / 3)
 	touch_area_y_end = get_viewport().get_visible_rect().size.y / 3.0
 	caja_dialogo.hide()
-
-func iniciar_dialogo_npc(lineas: Array[String]) -> void:
+	
+func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
 	if lineas.size() == 0: 
 		return
+	
 	dialogo_actual = lineas
 	indice_dialogo = 0
-	# Mostramos la caja de texto y le pasamos la primera línea
+	emisor_actual = emisor_nodo # Guardamos al NPC en la memoria de la UI
+	
 	caja_dialogo.show()
 	caja_dialogo.mostrar_texto(dialogo_actual[indice_dialogo])
 	
 func _siguiente_linea() -> void:
 	indice_dialogo += 1
 	if indice_dialogo < dialogo_actual.size():
-		# Si hay más texto, lo mostramos
 		caja_dialogo.mostrar_texto(dialogo_actual[indice_dialogo])
 	else:
-		# Si ya no hay texto, ocultamos la caja
 		caja_dialogo.hide()
+
+		if emisor_actual != null and emisor_actual.has_method("on_dialogo_terminado"):
+			emisor_actual.on_dialogo_terminado()
+			
+		emisor_actual = null
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch and event.pressed:

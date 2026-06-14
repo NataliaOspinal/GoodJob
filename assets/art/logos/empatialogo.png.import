@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://420103qewvxx"
-path="res://.godot/imported/gestionlogo.png-4426ca575b11b95180d333233418a9de.ctex"
+uid="uid://ccakd30wgp4yu"
+path="res://.godot/imported/empatialogo.png-e46953a3dffdea7fd049a40342688f23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/gestionlogo.png"
-dest_files=["res://.godot/imported/gestionlogo.png-4426ca575b11b95180d333233418a9de.ctex"]
+source_file="res://assets/art/logos/empatialogo.png"
+dest_files=["res://.godot/imported/empatialogo.png-e46953a3dffdea7fd049a40342688f23.ctex"]
 
 [params]
 

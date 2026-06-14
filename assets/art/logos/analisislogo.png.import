@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lcsiurfa5k45"
-path="res://.godot/imported/powerbilogo.png-7881c8ebc1d94a0616aa1d7ac9c4e305.ctex"
+uid="uid://ca33hs41iyhtp"
+path="res://.godot/imported/analisislogo.png-0fd9d4ad11bf62284f91b8b06735352d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/powerbilogo.png"
-dest_files=["res://.godot/imported/powerbilogo.png-7881c8ebc1d94a0616aa1d7ac9c4e305.ctex"]
+source_file="res://assets/art/logos/analisislogo.png"
+dest_files=["res://.godot/imported/analisislogo.png-0fd9d4ad11bf62284f91b8b06735352d.ctex"]
 
 [params]
 

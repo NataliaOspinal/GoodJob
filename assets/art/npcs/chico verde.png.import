@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cku8msm7rfr0q"
-path="res://.godot/imported/Free Chicken Sprites.png-4ecd4871f16ce0a65ec5fba0f0abfdc6.ctex"
+uid="uid://mam38xh1xkaa"
+path="res://.godot/imported/chico verde.png-6e22e8852a0c58a320be89ce5460fb29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/characters/Free Chicken Sprites.png"
-dest_files=["res://.godot/imported/Free Chicken Sprites.png-4ecd4871f16ce0a65ec5fba0f0abfdc6.ctex"]
+source_file="res://assets/art/npcs/chico verde.png"
+dest_files=["res://.godot/imported/chico verde.png-6e22e8852a0c58a320be89ce5460fb29.ctex"]
 
 [params]
 

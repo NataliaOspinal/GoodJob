@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dye5gvmqu2m4a"]
+
+[ext_resource type="Script" uid="uid://bjkex2r83byb" path="res://scripts/folder.gd" id="1_4sc02"]
+[ext_resource type="Texture2D" uid="uid://cmr1u1k71mvqb" path="res://assets/art/FolderAzul.png" id="2_axusy"]
+[ext_resource type="Texture2D" uid="uid://w86fasy6pddm" path="res://assets/art/FolderRojo.png" id="3_c576k"]
+[ext_resource type="Texture2D" uid="uid://cmrrro1bkp7yc" path="res://assets/art/FolderAmarillo.png" id="4_gxvkc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axusy"]
+size = Vector2(22, 18)
+
+[node name="Folder" type="Area2D" unique_id=1985544752]
+script = ExtResource("1_4sc02")
+img_azul = ExtResource("2_axusy")
+img_rojo = ExtResource("3_c576k")
+img_amarillo = ExtResource("4_gxvkc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=651070403]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_axusy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=170843648]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cc7dhdcunjjl5"]
 
 [ext_resource type="Script" uid="uid://5jbogqc5bg3v" path="res://scripts/npc.gd" id="1_4xjx3"]
-[ext_resource type="SpriteFrames" uid="uid://grn6du4b428j" path="res://assets/art/characters/NPC.tres" id="1_qavly"]
+[ext_resource type="SpriteFrames" uid="uid://grn6du4b428j" path="res://assets/art/npcs/NPCMorada.tres" id="1_qavly"]
 [ext_resource type="Texture2D" uid="uid://de8ly1bmpxkvk" path="res://assets/ui/PopEx.png" id="3_0hr2t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6yaf"]
@@ -22,7 +22,7 @@ shape = SubResource("CapsuleShape2D_y6yaf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1133498093]
 position = Vector2(1, -5)
 sprite_frames = ExtResource("1_qavly")
-animation = &"Idle"
+animation = &"Down"
 
 [node name="AreaDeteccion" type="Area2D" parent="." unique_id=1382944357]
 

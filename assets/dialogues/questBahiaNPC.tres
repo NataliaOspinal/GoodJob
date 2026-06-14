@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://bu2xj7wlymdlt"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_u3wbs"]
+
+[resource]
+script = ExtResource("1_u3wbs")
+nombre_npc = "Pablito"
+metadata/_custom_type_script = "uid://db28wcqw17br3"

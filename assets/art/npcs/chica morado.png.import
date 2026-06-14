@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca33hs41iyhtp"
-path="res://.godot/imported/analisislogo.png-33a9137b1ea2441c717386598779adc7.ctex"
+uid="uid://bopkmu2qsod7"
+path="res://.godot/imported/chica morado.png-9559fcfda5fb5039fcd5ce36543e6fc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/analisislogo.png"
-dest_files=["res://.godot/imported/analisislogo.png-33a9137b1ea2441c717386598779adc7.ctex"]
+source_file="res://assets/art/npcs/chica morado.png"
+dest_files=["res://.godot/imported/chica morado.png-9559fcfda5fb5039fcd5ce36543e6fc8.ctex"]
 
 [params]
 
