@@ -1,12 +1,12 @@
 extends CharacterBody2D
- 
+
 @export var walk_speed: float = 120.0
 @export var run_speed: float = 160.0
 @export var joystick_threshold: float = 70.0
  
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
- 
+
 var joystick_active: bool = false
 var joystick_start_pos: Vector2 = Vector2.ZERO
 var drag_vector: Vector2 = Vector2.ZERO
@@ -38,9 +38,19 @@ func _physics_process(_delta: float) -> void:
 		var current_speed: float = walk_speed
 		if distance >= joystick_threshold:
 			current_speed = run_speed
-		velocity = direction * current_speed
-		_update_raycast_direction(direction)
-		_update_animations(direction)
+			
+		var orthogonal_direction: Vector2 = Vector2.ZERO
+		
+		if abs(direction.x) > abs(direction.y):
+			orthogonal_direction.x = sign(direction.x)
+		else:
+			orthogonal_direction.y = sign(direction.y)
+			
+		velocity = orthogonal_direction * current_speed
+		
+		_update_raycast_direction(orthogonal_direction)
+		_update_animations(orthogonal_direction)
+		
 	else:
 		velocity = Vector2.ZERO
 		anim.play("Idle")
@@ -54,8 +64,8 @@ func _update_raycast_direction(direction: Vector2) -> void:
  
 func _update_animations(direction: Vector2) -> void:
 	if abs(direction.x) > abs(direction.y):
-		anim.play("Right")
-		anim.flip_h = (direction.x < 0) 
+		anim.play("Left")
+		anim.flip_h = (direction.x > 0) 
 	else:
 		if direction.y < 0:
 			anim.play("Up")

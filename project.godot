@@ -25,6 +25,12 @@ window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
+[global_group]
+
+NPC=""
+Interfaz=""
+Player=""
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
