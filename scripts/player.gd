@@ -38,9 +38,19 @@ func _physics_process(_delta: float) -> void:
 		var current_speed: float = walk_speed
 		if distance >= joystick_threshold:
 			current_speed = run_speed
-		velocity = direction * current_speed
-		_update_raycast_direction(direction)
-		_update_animations(direction)
+			
+		var orthogonal_direction: Vector2 = Vector2.ZERO
+		
+		if abs(direction.x) > abs(direction.y):
+			orthogonal_direction.x = sign(direction.x)
+		else:
+			orthogonal_direction.y = sign(direction.y)
+			
+		velocity = orthogonal_direction * current_speed
+		
+		_update_raycast_direction(orthogonal_direction)
+		_update_animations(orthogonal_direction)
+		
 	else:
 		velocity = Vector2.ZERO
 		anim.play("Idle")
