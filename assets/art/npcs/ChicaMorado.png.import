@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bopkmu2qsod7"
-path="res://.godot/imported/chica morado.png-9559fcfda5fb5039fcd5ce36543e6fc8.ctex"
+uid="uid://doraow0uvn8x4"
+path="res://.godot/imported/ChicaMorado.png-a244e569c895877b6e9771946546c8c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/npcs/chica morado.png"
-dest_files=["res://.godot/imported/chica morado.png-9559fcfda5fb5039fcd5ce36543e6fc8.ctex"]
+source_file="res://assets/art/npcs/ChicaMorado.png"
+dest_files=["res://.godot/imported/ChicaMorado.png-a244e569c895877b6e9771946546c8c9.ctex"]
 
 [params]
 

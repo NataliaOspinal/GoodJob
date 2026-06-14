@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mam38xh1xkaa"
-path="res://.godot/imported/chico verde.png-6e22e8852a0c58a320be89ce5460fb29.ctex"
+uid="uid://dlmyh24r0yf8e"
+path="res://.godot/imported/dibujo 3 frente.png-a71005dcf274e5272e8ee7da6c8e8ad9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/npcs/chico verde.png"
-dest_files=["res://.godot/imported/chico verde.png-6e22e8852a0c58a320be89ce5460fb29.ctex"]
+source_file="res://assets/art/npcs/dibujo 3 frente.png"
+dest_files=["res://.godot/imported/dibujo 3 frente.png-a71005dcf274e5272e8ee7da6c8e8ad9.ctex"]
 
 [params]
 

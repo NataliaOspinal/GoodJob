@@ -14,11 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://dtcm5wmgam5dj" path="res://assets/ui/cv icono.png" id="9_mlfws"]
 [ext_resource type="Texture2D" uid="uid://dx7mo2ysboedx" path="res://assets/ui/mapa icono.png" id="10_muoeo"]
 [ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="11_jgvbx"]
+[ext_resource type="Texture2D" uid="uid://dlmyh24r0yf8e" path="res://assets/art/npcs/dibujo 3 frente.png" id="11_wsjni"]
 [ext_resource type="Texture2D" uid="uid://dn1lhne4o34aq" path="res://assets/ui/misiones.png" id="12_dqslm"]
 [ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="13_0fm2a"]
 [ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="14_q2ukl"]
 [ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="15_hf1pw"]
 [ext_resource type="PackedScene" uid="uid://dye5gvmqu2m4a" path="res://scenes/Folder.tscn" id="19_o1vou"]
+[ext_resource type="SpriteFrames" uid="uid://bae0bw7hagled" path="res://assets/art/npcs/NPCMorada.tres" id="21_4hg0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crwti"]
 texture = ExtResource("1_nar16")
@@ -680,6 +682,8 @@ limit_bottom = 1390
 [node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_f1m12")]
 position = Vector2(239, 1019)
 datos = ExtResource("9_7wiam")
+usar_estatico = true
+textura_estatica = ExtResource("11_wsjni")
 icono_popin_personalizado = ExtResource("8_nar16")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1330852922 groups=["Interfaz"]]
@@ -770,6 +774,7 @@ rotates = false
 [node name="NpcIsle" parent="RutaNPC/PathFollow2D" unique_id=2079635334 instance=ExtResource("7_f1m12")]
 type = 1
 datos = ExtResource("15_hf1pw")
+frames_animados = ExtResource("21_4hg0a")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=244953546]
 position = Vector2(392, 919)
