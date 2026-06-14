@@ -12,3 +12,7 @@ class_name DatosNPC
 @export_multiline var dialogo_recordatorio: Array[String]
 @export_multiline var dialogos_fase_2: Array[String]
 @export_multiline var dialogo_bucle_final: Array[String]
+@export_group("Minijuego de Calmar (Opciones)")
+@export var pregunta_panico: String = ""
+@export var opcion_correcta: String = ""
+@export var opcion_incorrecta: String = ""
