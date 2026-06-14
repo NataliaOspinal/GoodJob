@@ -656,7 +656,6 @@ tile_set = SubResource("TileSet_iyc47")
 
 [node name="5Techos" type="TileMapLayer" parent="." unique_id=911339862]
 z_index = 10
-tile_map_data = PackedByteArray("AAAOAD8AAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_iyc47")
 
 [node name="Player" parent="." unique_id=1371327339 instance=ExtResource("6_4hg0a")]

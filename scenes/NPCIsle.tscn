@@ -39,6 +39,9 @@ offset_bottom = -8.0
 texture_normal = ExtResource("3_0hr2t")
 stretch_mode = 0
 
+[node name="SpriteEstatico" type="Sprite2D" parent="." unique_id=675918523]
+visible = false
+
 [connection signal="body_entered" from="AreaDeteccion" to="." method="_al_jugador_entrar"]
 [connection signal="body_exited" from="AreaDeteccion" to="." method="_al_jugador_salir"]
 [connection signal="pressed" from="BotonPopIn" to="." method="_al_presionar_popin"]
