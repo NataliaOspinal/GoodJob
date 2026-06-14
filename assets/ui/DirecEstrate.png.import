@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrodybokwky3"
-path="res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"
+uid="uid://c2nmdt2exs3m1"
+path="res://.godot/imported/DirecEstrate.png-22d75cc7bd2dd97d7aa284ab3ddc3576.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Alba2.png"
-dest_files=["res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"]
+source_file="res://assets/ui/DirecEstrate.png"
+dest_files=["res://.godot/imported/DirecEstrate.png-22d75cc7bd2dd97d7aa284ab3ddc3576.ctex"]
 
 [params]
 

@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://c2ybriy4w6d7y"]
+
+[ext_resource type="Texture2D" uid="uid://dcm0bb3diyamo" path="res://assets/ui/CV.png" id="1_2amrh"]
+[ext_resource type="Script" uid="uid://d14nfmgbio5uj" path="res://scripts/pantalla_cv.gd" id="1_jnnbn"]
+[ext_resource type="FontFile" uid="uid://djtyf8a42fe5f" path="res://assets/fonts/PixelOperatorMonoHB.ttf" id="2_32ugb"]
+[ext_resource type="FontFile" uid="uid://bhu13vtpy525o" path="res://assets/fonts/PixelOperatorMono.ttf" id="3_jnnbn"]
+[ext_resource type="Texture2D" uid="uid://lcsiurfa5k45" path="res://assets/art/powerbilogo.png" id="4_en43h"]
+[ext_resource type="Texture2D" uid="uid://5bwablrmrixd" path="res://assets/art/mercado.png" id="5_i5uyj"]
+[ext_resource type="Texture2D" uid="uid://ca33hs41iyhtp" path="res://assets/art/analisislogo.png" id="6_y4rg2"]
+[ext_resource type="Texture2D" uid="uid://420103qewvxx" path="res://assets/art/gestionlogo.png" id="7_525wf"]
+[ext_resource type="Texture2D" uid="uid://cqf6bbnmd10oy" path="res://assets/art/Presionlogo.png" id="8_6akkr"]
+[ext_resource type="Texture2D" uid="uid://ccakd30wgp4yu" path="res://assets/art/empatialogo.png" id="9_u8eos"]
+[ext_resource type="AudioStream" uid="uid://hsv6wvdgaq23" path="res://assets/music/sounds/Ok.wav" id="11_en43h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_en43h"]
+
+[node name="PantallaCv" type="Control" unique_id=794446974]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jnnbn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1522905647]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="FondoCV" type="TextureRect" parent="." unique_id=819677553]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -640.0
+offset_right = 360.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2amrh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LabelNombre" type="Label" parent="FondoCV" unique_id=1641097423]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 220.0
+offset_right = 688.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_32ugb")
+theme_override_font_sizes/font_size = 70
+text = "NombreJugador"
+
+[node name="Label" type="Label" parent="FondoCV" unique_id=596476754]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 495.0
+offset_right = 506.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_32ugb")
+theme_override_font_sizes/font_size = 70
+text = "EDUCACIóN:"
+
+[node name="Label2" type="Label" parent="FondoCV" unique_id=2104909091]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 390.0
+offset_right = 681.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Administración y Marketing (Retail)"
+
+[node name="Label5" type="Label" parent="FondoCV" unique_id=1910075362]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 695.0
+offset_right = 277.0
+offset_bottom = 732.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Power BI"
+
+[node name="Label6" type="Label" parent="FondoCV" unique_id=1836617834]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 691.0
+offset_right = 636.0
+offset_bottom = 728.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Mercado"
+
+[node name="Label7" type="Label" parent="FondoCV" unique_id=742931665]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 771.0
+offset_right = 556.0
+offset_bottom = 808.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Análisis de Datos"
+
+[node name="Label3" type="Label" parent="FondoCV" unique_id=1398051598]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 610.0
+offset_right = 524.0
+offset_bottom = 681.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_32ugb")
+theme_override_font_sizes/font_size = 45
+text = "HABILIDADES TÉCNICAS:"
+
+[node name="Label4" type="Label" parent="FondoCV" unique_id=2019377651]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 847.0
+offset_right = 524.0
+offset_bottom = 918.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_32ugb")
+theme_override_font_sizes/font_size = 45
+text = "HABILIDADES BLANDAS:"
+
+[node name="Label8" type="Label" parent="FondoCV" unique_id=209190378]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 1062.0
+offset_right = 580.0
+offset_bottom = 1099.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Trabajo Bajo Presión"
+
+[node name="Label9" type="Label" parent="FondoCV" unique_id=2024219251]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 950.0
+offset_right = 691.0
+offset_bottom = 987.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Gestión de Equipo"
+
+[node name="Label10" type="Label" parent="FondoCV" unique_id=1649725047]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 952.0
+offset_right = 263.0
+offset_bottom = 989.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jnnbn")
+theme_override_font_sizes/font_size = 36
+text = "Empatía"
+
+[node name="Powerbilogo" type="Sprite2D" parent="FondoCV" unique_id=514660355]
+position = Vector2(93.99999, 708)
+scale = Vector2(3.2343738, 3.2499948)
+texture = ExtResource("4_en43h")
+
+[node name="Mercado" type="Sprite2D" parent="FondoCV" unique_id=1466292478]
+position = Vector2(442, 710)
+scale = Vector2(4.249999, 3.6562524)
+texture = ExtResource("5_i5uyj")
+
+[node name="Analisislogo" type="Sprite2D" parent="FondoCV" unique_id=1543266297]
+position = Vector2(193, 791.00006)
+scale = Vector2(4.3437495, 3.5624983)
+texture = ExtResource("6_y4rg2")
+
+[node name="Gestionlogo" type="Sprite2D" parent="FondoCV" unique_id=346111370]
+position = Vector2(335, 972)
+scale = Vector2(4.125, 4)
+texture = ExtResource("7_525wf")
+
+[node name="Presionlogo" type="Sprite2D" parent="FondoCV" unique_id=926772307]
+position = Vector2(158.00002, 1070)
+scale = Vector2(6.5, 5.5625)
+texture = ExtResource("8_6akkr")
+
+[node name="Empatialogo" type="Sprite2D" parent="FondoCV" unique_id=1793107897]
+position = Vector2(81.99999, 980)
+scale = Vector2(5.4375, 4.5625)
+texture = ExtResource("9_u8eos")
+
+[node name="BloqueSoftSkills" type="ColorRect" parent="FondoCV" unique_id=535301249]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 850.0
+offset_right = 693.0
+offset_bottom = 1116.0
+color = Color(0.94509804, 0.94509804, 0.8117647, 1)
+
+[node name="BloqueTechSkills" type="ColorRect" parent="FondoCV" unique_id=393639118]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 612.0
+offset_right = 693.0
+offset_bottom = 827.0
+color = Color(0.94509804, 0.94509804, 0.8117647, 1)
+
+[node name="AudioCV" type="AudioStreamPlayer" parent="." unique_id=370675246]
+stream = ExtResource("11_en43h")
+
+[node name="BtnToqueCerrar" type="Button" parent="." unique_id=60780033]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_en43h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_en43h")

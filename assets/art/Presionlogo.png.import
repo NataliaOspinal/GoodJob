@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrodybokwky3"
-path="res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"
+uid="uid://cqf6bbnmd10oy"
+path="res://.godot/imported/Presionlogo.png-53f72da0f98e8463d4fefbce76442dbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Alba2.png"
-dest_files=["res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"]
+source_file="res://assets/art/Presionlogo.png"
+dest_files=["res://.godot/imported/Presionlogo.png-53f72da0f98e8463d4fefbce76442dbb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrodybokwky3"
-path="res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"
+uid="uid://5bwablrmrixd"
+path="res://.godot/imported/mercado.png-f8b9171b35cd1bd31142c9eac0f669cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Alba2.png"
-dest_files=["res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"]
+source_file="res://assets/art/mercado.png"
+dest_files=["res://.godot/imported/mercado.png-f8b9171b35cd1bd31142c9eac0f669cc.ctex"]
 
 [params]
 

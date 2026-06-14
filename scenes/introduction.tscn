@@ -1,11 +1,91 @@
 [gd_scene format=3 uid="uid://dvmtwjs6k70on"]
 
+[ext_resource type="AudioStream" uid="uid://hsv6wvdgaq23" path="res://assets/music/sounds/Ok.wav" id="1_fiwxd"]
 [ext_resource type="Script" uid="uid://cwp5j4dq6embw" path="res://scripts/introduction.gd" id="1_tgans"]
 [ext_resource type="Texture2D" uid="uid://3f75jkcb4sbb" path="res://assets/ui/FondoIntro.jpg" id="2_e3kje"]
-[ext_resource type="Texture2D" uid="uid://cyuox0iqfdx6r" path="res://assets/art/Alba1.png" id="2_e7oap"]
+[ext_resource type="Texture2D" uid="uid://5bsqfm1houos" path="res://assets/art/Alba1.png" id="2_e7oap"]
 [ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="2_tgans"]
-[ext_resource type="Texture2D" uid="uid://cngu7spmj6uxh" path="res://assets/art/Alba2.png" id="3_k15ss"]
+[ext_resource type="Texture2D" uid="uid://blrodybokwky3" path="res://assets/art/Alba2.png" id="3_k15ss"]
 [ext_resource type="Texture2D" uid="uid://powopyxjvdwa" path="res://assets/ui/FondoQuienEres.png" id="3_nvvsg"]
+[ext_resource type="Texture2D" uid="uid://bm0yjeel6nk63" path="res://assets/art/ChicoUTP.png" id="7_k15ss"]
+[ext_resource type="Texture2D" uid="uid://cwll0ny1mjkos" path="res://assets/art/ChicaUTP.png" id="8_e1131"]
+[ext_resource type="FontFile" uid="uid://bhu13vtpy525o" path="res://assets/fonts/PixelOperatorMono.ttf" id="9_b17ev"]
+[ext_resource type="Texture2D" uid="uid://bdv3qo4hufqr3" path="res://assets/ui/Tec.png" id="10_3mll4"]
+[ext_resource type="Texture2D" uid="uid://n66trgi7s2kc" path="res://assets/ui/Negocios.png" id="11_sg017"]
+[ext_resource type="Texture2D" uid="uid://c0fgqytvobmhe" path="res://assets/ui/Ley.png" id="12_603r8"]
+[ext_resource type="Texture2D" uid="uid://dwfrgcoi2vmbl" path="res://assets/ui/Salud.png" id="13_84fe3"]
+[ext_resource type="Texture2D" uid="uid://d1kpobxw0rq3t" path="res://assets/ui/AdminEmp.png" id="14_v5esy"]
+[ext_resource type="Texture2D" uid="uid://b35i1btjpxssa" path="res://assets/ui/AdminInter.png" id="15_auo78"]
+[ext_resource type="Texture2D" uid="uid://dp767cp85tcet" path="res://assets/ui/AdminMark.png" id="16_185ji"]
+[ext_resource type="Texture2D" uid="uid://bx3fx42x5x1bp" path="res://assets/ui/Economia.png" id="17_xvm8y"]
+[ext_resource type="Texture2D" uid="uid://bceonkjddwol" path="res://assets/ui/MarkFide.png" id="18_auo78"]
+[ext_resource type="Texture2D" uid="uid://bomobq7f25qf8" path="res://assets/ui/BIData.png" id="19_xvm8y"]
+[ext_resource type="Texture2D" uid="uid://c2nmdt2exs3m1" path="res://assets/ui/DirecEstrate.png" id="20_nx8oy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b17ev"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.98039216, 0.12941177, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uycjf"]
+bg_color = Color(1, 0.8498166, 0.7924475, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fbsd"]
+bg_color = Color(0.79452276, 0.3033918, 2.6375652e-05, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sg017"]
+font = ExtResource("9_b17ev")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v5esy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v5esy"]
+font = ExtResource("9_b17ev")
+font_size = 49
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_auo78"]
+font = ExtResource("9_b17ev")
+font_size = 54
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_185ji"]
+font = ExtResource("9_b17ev")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg017"]
+bg_color = Color(0.74764377, 0.1933893, 0.0729773, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_603r8"]
+font = ExtResource("9_b17ev")
+font_size = 57
+font_color = Color(0, 0, 0, 1)
 
 [node name="Introduction" type="Control" unique_id=613757454]
 layout_mode = 3
@@ -25,6 +105,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_e3kje")
 expand_mode = 1
 
@@ -36,23 +117,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_nvvsg")
 expand_mode = 1
-
-[node name="Profesor" type="TextureRect" parent="." unique_id=1043325023]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch_mode = 5
 
 [node name="CVProfesor" type="ColorRect" parent="." unique_id=2006682667]
 modulate = Color(1, 1, 1, 0)
@@ -61,6 +128,7 @@ offset_left = 124.0
 offset_top = 97.0
 offset_right = 591.0
 offset_bottom = 879.0
+mouse_filter = 2
 color = Color(0.3541747, 0.76978076, 0.6211822, 1)
 
 [node name="CajaDialogo" parent="." unique_id=715783090 instance=ExtResource("2_tgans")]
@@ -84,21 +152,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -362.0
+offset_top = -364.0
+offset_right = 362.0
+offset_bottom = 90.585144
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 24
 
-[node name="BtnChico" type="Button" parent="ContenedorUI/MenuGenero" unique_id=1269624821]
+[node name="BtnChico" type="TextureButton" parent="ContenedorUI/MenuGenero" unique_id=1013509620]
+custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
-text = "Chico"
+texture_normal = ExtResource("7_k15ss")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="BtnChica" type="Button" parent="ContenedorUI/MenuGenero" unique_id=163129828]
+[node name="BtnChica" type="TextureButton" parent="ContenedorUI/MenuGenero" unique_id=1292533530]
+custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
-text = "Chica"
+texture_normal = ExtResource("8_e1131")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="MenuNombre" type="VBoxContainer" parent="ContenedorUI" unique_id=2111468178]
 layout_mode = 1
@@ -107,21 +181,400 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -250.0
+offset_top = -111.35498
+offset_right = 250.0
+offset_bottom = 18.64502
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
 [node name="InputNombre" type="LineEdit" parent="ContenedorUI/MenuNombre" unique_id=1284095162]
+custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_b17ev")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_b17ev")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b17ev")
 max_length = 12
 
 [node name="BtnConfirmarNombre" type="Button" parent="ContenedorUI/MenuNombre" unique_id=1398353106]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_b17ev")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_uycjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4fbsd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uycjf")
 text = "Confirmar"
+
+[node name="MenuCarreras" type="GridContainer" parent="ContenedorUI" unique_id=109025441]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -619.52
+offset_right = 283.0
+offset_bottom = 220.47986
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = -38
+theme_override_constants/v_separation = 22
+columns = 2
+
+[node name="BtnTec" type="TextureButton" parent="ContenedorUI/MenuCarreras" unique_id=774093676]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("10_3mll4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuCarreras/BtnTec" unique_id=366594961]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "TECNOLOGÍA"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="BtnNegocios" type="TextureButton" parent="ContenedorUI/MenuCarreras" unique_id=290044746]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("11_sg017")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuCarreras/BtnNegocios" unique_id=642721018]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "NEGOCIOS"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="BtnLeyes" type="TextureButton" parent="ContenedorUI/MenuCarreras" unique_id=1671117321]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("12_603r8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuCarreras/BtnLeyes" unique_id=1606689324]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "LEYES"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="BtnSalud" type="TextureButton" parent="ContenedorUI/MenuCarreras" unique_id=1482191823]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("13_84fe3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuCarreras/BtnSalud" unique_id=1154101106]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "SALUD"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="MenuSubCarreras" type="GridContainer" parent="ContenedorUI" unique_id=140231733]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -619.52
+offset_right = 315.0
+offset_bottom = 220.47998
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = -38
+theme_override_constants/v_separation = 22
+columns = 2
+
+[node name="BtnAdminEmp" type="TextureButton" parent="ContenedorUI/MenuSubCarreras" unique_id=11504098]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("14_v5esy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuSubCarreras/BtnAdminEmp" unique_id=997407454]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "Admin. 
+Empresas"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="BtnAdminInt" type="TextureButton" parent="ContenedorUI/MenuSubCarreras" unique_id=1537992887]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("15_auo78")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuSubCarreras/BtnAdminInt" unique_id=1252338481]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "Admin. 
+Internacional"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="BtnAdminMark" type="TextureButton" parent="ContenedorUI/MenuSubCarreras" unique_id=728970680]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("16_185ji")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuSubCarreras/BtnAdminMark" unique_id=228632118]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "Admin. y 
+Marketing"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="BtnEcon" type="TextureButton" parent="ContenedorUI/MenuSubCarreras" unique_id=1505801556]
+custom_minimum_size = Vector2(334.375, 384.135)
+layout_mode = 2
+texture_normal = ExtResource("17_xvm8y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuSubCarreras/BtnEcon" unique_id=1267884379]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "Economía"
+label_settings = SubResource("LabelSettings_sg017")
+horizontal_alignment = 1
+
+[node name="MenuEspecialidad" type="ScrollContainer" parent="ContenedorUI" unique_id=1575591752]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -591.545
+offset_right = -5.0
+offset_bottom = 116.45502
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(220, 350)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v5esy")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="ContenedorCarrusel" type="HBoxContainer" parent="ContenedorUI/MenuEspecialidad" unique_id=695076257]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Control2" type="Control" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel" unique_id=1859219224]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="BtnRetail" type="TextureButton" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel" unique_id=1887336029]
+custom_minimum_size = Vector2(439.565, 700)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("18_auo78")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel/BtnRetail" unique_id=1432502048]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "Marketing Retail
+y
+Fidelización"
+label_settings = SubResource("LabelSettings_v5esy")
+horizontal_alignment = 1
+
+[node name="BtnBI" type="TextureButton" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel" unique_id=1097027333]
+custom_minimum_size = Vector2(440, 700)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("19_xvm8y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel/BtnBI" unique_id=1649983448]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "BI y Data"
+label_settings = SubResource("LabelSettings_auo78")
+horizontal_alignment = 1
+
+[node name="BtnStartups" type="TextureButton" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel" unique_id=683508357]
+custom_minimum_size = Vector2(439.565, 700)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("20_nx8oy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel/BtnStartups" unique_id=2123416916]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.99002
+offset_bottom = -46.99002
+grow_horizontal = 2
+grow_vertical = 0
+text = "Startups
+ y 
+Negocios Digitales"
+label_settings = SubResource("LabelSettings_185ji")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="ContenedorUI/MenuEspecialidad/ContenedorCarrusel" unique_id=70371677]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="PopUpAlerta" type="Panel" parent="ContenedorUI" unique_id=753230249]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.5
+offset_top = -151.29501
+offset_right = 256.5
+offset_bottom = -36.295227
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 50)
+theme_override_styles/panel = SubResource("StyleBoxFlat_sg017")
+
+[node name="Label" type="Label" parent="ContenedorUI/PopUpAlerta" unique_id=397389599]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -11.5
+offset_right = 56.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡Más adelante!"
+label_settings = SubResource("LabelSettings_603r8")
+
+[node name="MarcoProfesor" type="Control" parent="." unique_id=1792144496]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -530.0
+offset_right = 254.5
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Profesor" type="TextureRect" parent="MarcoProfesor" unique_id=1043325023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AudioBoton" type="AudioStreamPlayer" parent="." unique_id=115198298]
+stream = ExtResource("1_fiwxd")
