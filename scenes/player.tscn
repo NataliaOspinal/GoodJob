@@ -7,7 +7,7 @@
 radius = 2.0
 height = 10.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1371327339]
+[node name="Player" type="CharacterBody2D" unique_id=1371327339 groups=["Player"]]
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1055128388]
@@ -21,4 +21,5 @@ sprite_frames = ExtResource("1_3vyb7")
 animation = &"Right"
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=514646648]
-target_position = Vector2(0, 10)
+position = Vector2(0, 8)
+target_position = Vector2(-8, 0)

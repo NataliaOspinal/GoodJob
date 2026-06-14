@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://bh2hlvrckei48"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_ixt2l"]
+
+[resource]
+script = ExtResource("1_ixt2l")
+nombre_npc = "Pedrito"
+dialogos = Array[String](["ola jijiji"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

@@ -71,6 +71,7 @@ func _input(event: InputEvent) -> void:
 		return
 		
 	if event is InputEventScreenTouch and event.pressed:
+		get_viewport().set_input_as_handled()
 		if audio_tap.stream:
 			audio_tap.play()
 		
