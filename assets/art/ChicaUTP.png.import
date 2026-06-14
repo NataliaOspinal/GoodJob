@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrodybokwky3"
-path="res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"
+uid="uid://cwll0ny1mjkos"
+path="res://.godot/imported/ChicaUTP.png-4830997d95ef4995af162b74a8acc997.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Alba2.png"
-dest_files=["res://.godot/imported/Alba2.png-f4478ba85aee72439791624c580912c5.ctex"]
+source_file="res://assets/art/ChicaUTP.png"
+dest_files=["res://.godot/imported/ChicaUTP.png-4830997d95ef4995af162b74a8acc997.ctex"]
 
 [params]
 
