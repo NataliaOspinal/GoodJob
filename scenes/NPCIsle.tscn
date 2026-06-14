@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://cc7dhdcunjjl5"]
 
 [ext_resource type="Script" uid="uid://5jbogqc5bg3v" path="res://scripts/npc.gd" id="1_4xjx3"]
+[ext_resource type="SpriteFrames" uid="uid://bae0bw7hagled" path="res://assets/art/npcs/NPCMorada.tres" id="1_qavly"]
 [ext_resource type="Texture2D" uid="uid://de8ly1bmpxkvk" path="res://assets/ui/PopEx.png" id="3_0hr2t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6yaf"]
-height = 22.0
+radius = 2.0
+height = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4xjx3"]
-radius = 22.0
+radius = 19.0
 
 [node name="NpcIsle" type="CharacterBody2D" unique_id=2079635334 groups=["NPC"]]
 script = ExtResource("1_4xjx3")
@@ -19,7 +21,8 @@ shape = SubResource("CapsuleShape2D_y6yaf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1133498093]
 position = Vector2(1, -5)
-animation = &""
+sprite_frames = ExtResource("1_qavly")
+animation = &"Idle"
 
 [node name="AreaDeteccion" type="Area2D" parent="." unique_id=1382944357]
 

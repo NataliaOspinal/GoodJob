@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://1wnndddtrrir"]
+
+[ext_resource type="Script" uid="uid://bmpe34y6r2qp0" path="res://scripts/canvas_layer.gd" id="1_wwj6d"]
+[ext_resource type="Texture2D" uid="uid://dtcm5wmgam5dj" path="res://assets/ui/cv icono.png" id="2_pahpa"]
+[ext_resource type="Texture2D" uid="uid://dx7mo2ysboedx" path="res://assets/ui/mapa icono.png" id="3_8lqd1"]
+[ext_resource type="Script" uid="uid://di6ssdu633ib3" path="res://scripts/sistema_misiones.gd" id="4_xcu7p"]
+[ext_resource type="Texture2D" uid="uid://dn1lhne4o34aq" path="res://assets/ui/misiones.png" id="5_jhf2d"]
+[ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="6_colgv"]
+[ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="7_wwnl4"]
+[ext_resource type="PackedScene" uid="uid://c2ybriy4w6d7y" path="res://scenes/PantallaCV.tscn" id="8_pahpa"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=170823451 groups=["Interfaz"]]
+layer = 2
+script = ExtResource("1_wwj6d")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=182572983]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 168.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=456641781]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="BotonCV" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=1914040519]
+layout_mode = 2
+texture_normal = ExtResource("2_pahpa")
+stretch_mode = 3
+
+[node name="BotonMapa" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=266202199]
+layout_mode = 2
+texture_normal = ExtResource("3_8lqd1")
+
+[node name="SistemaMisiones" type="Control" parent="MarginContainer" unique_id=483482738]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+script = ExtResource("4_xcu7p")
+
+[node name="BotonAbrir" type="TextureButton" parent="MarginContainer/SistemaMisiones" unique_id=1484719311]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_jhf2d")
+
+[node name="CuadroMisiones" type="Panel" parent="MarginContainer/SistemaMisiones" unique_id=1548558300]
+layout_mode = 0
+offset_right = 267.0
+offset_bottom = 276.0
+
+[node name="BotonCerrar" type="TextureButton" parent="MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=659593790]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 8.0
+offset_right = 259.0
+offset_bottom = 78.0
+texture_normal = ExtResource("6_colgv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=72735332]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 89.0
+offset_right = 257.0
+offset_bottom = 259.0
+
+[node name="UITimer" type="Timer" parent="." unique_id=314889211]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="CajaDialogo" parent="." unique_id=715783090 instance=ExtResource("7_wwnl4")]
+visible = false
+anchors_preset = -1
+anchor_left = 0.013888889
+anchor_top = 0.640625
+anchor_right = 0.9861111
+anchor_bottom = 0.7828115
+offset_left = 0.0
+offset_top = 258.0
+offset_right = 0.0
+offset_bottom = 258.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PantallaCv" parent="." unique_id=794446974 instance=ExtResource("8_pahpa")]
+visible = false
+z_index = 10
+
+[connection signal="pressed" from="MarginContainer/SistemaMisiones/BotonAbrir" to="MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
+[connection signal="pressed" from="MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]
+[connection signal="timeout" from="UITimer" to="." method="_ocultar_ui"]
+[connection signal="avanzar_dialogo" from="CajaDialogo" to="." method="_siguiente_linea"]

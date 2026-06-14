@@ -1,6 +1,6 @@
 extends CharacterBody2D
-
-enum NpcType { IDLE, PATROL }
+signal fue_tocado_por_jugador(nodo_npc)
+enum NpcType { IDLE, PATROL, CONTROL_EXTERNO }
 enum EstadoMision { ANTES_DEL_EVENTO, EVENTO_EN_PROGRESO, LISTO_PARA_FINALIZAR, COMPLETADO }
 
 @export var type: NpcType = NpcType.IDLE
@@ -19,6 +19,7 @@ enum EstadoMision { ANTES_DEL_EVENTO, EVENTO_EN_PROGRESO, LISTO_PARA_FINALIZAR, 
 @onready var area_deteccion: Area2D = $AreaDeteccion
 @onready var boton_popin: TextureButton = $BotonPopIn
 
+var modo_interaccion_fisica: bool = false
 var path_follow: PathFollow2D
 var moving_forward: bool = true
 var pausado_por_dialogo: bool = false
@@ -53,6 +54,11 @@ func _physics_process(delta: float) -> void:
 		if not usar_estatico:
 			anim.play("Idle") 
 		return 
+	if type == NpcType.CONTROL_EXTERNO:
+		move_and_slide()
+		if velocity.length() > 0.1:
+			_update_animations(velocity)
+		return
 		
 	if type == NpcType.PATROL and path_follow:
 		var old_pos = global_position
@@ -90,6 +96,9 @@ func _update_animations(direction: Vector2) -> void:
 # Logica de interaccion y eventos
 func _al_jugador_entrar(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		if modo_interaccion_fisica:
+			fue_tocado_por_jugador.emit(self)
+			return
 		if datos != null and datos.es_npc_especial:
 			if estado_actual == EstadoMision.EVENTO_EN_PROGRESO and GameManager.mision_resuelta:
 				estado_actual = EstadoMision.LISTO_PARA_FINALIZAR

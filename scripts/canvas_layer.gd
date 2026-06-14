@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var ui_timer: Timer = $UITimer
 @onready var margin_container: MarginContainer = $MarginContainer 
 @onready var caja_dialogo: Panel = $CajaDialogo
+@onready var boton_cv: TextureButton = $MarginContainer/HBoxContainer/BotonCV
+@onready var pantalla_cv = $PantallaCv
 
 @onready var audio_dialogo: AudioStreamPlayer = $AudioDialogo 
 
@@ -14,6 +16,7 @@ var touch_area_y_end: float = 0.0
 func _ready() -> void:
 	touch_area_y_end = get_viewport().get_visible_rect().size.y / 3.0
 	caja_dialogo.hide()
+	boton_cv.pressed.connect(_al_presionar_boton_cv)
 	
 
 func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
@@ -64,3 +67,7 @@ func _ocultar_ui() -> void:
 	var tween = create_tween()
 	tween.tween_property(margin_container, "modulate:a", 0.0, 0.5)
 	tween.tween_callback(margin_container.hide)
+	
+func _al_presionar_boton_cv() -> void:
+	print("¡El botón detectó el clic!")
+	pantalla_cv.mostrar_cv()
