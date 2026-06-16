@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://cfub3kt6e3a1n"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_d8fa2"]
+
+[resource]
+script = ExtResource("1_d8fa2")
+nombre_npc = "Alex"
+dialogos_fase_1 = Array[String](["El mar es hermoso...", "Siempre me he preguntado qué hay más allá...", "¿No me quieres contar algunas de tus historias?"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

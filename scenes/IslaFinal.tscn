@@ -643,6 +643,10 @@ script = ExtResource("5_hogs0")
 dialogos_fase_1 = Array[String](["Iniciando sistema A.I.D.A... ", "Escaneando currículum del candidato...", "Datos procesados", "Has adquirido sólidas habilidades blandas y técnicas", "Match del 98% encontrado", "Perfil óptimo para Analista de Marketing Retail", "Tu ruta de empleabilidad ha sido completada con éxito", "Estás listo para la industria", "¡Felicidades y gracias por jugar!"])
 metadata/_custom_type_script = "uid://db28wcqw17br3"
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2m6dx"]
+radius = 23.0
+height = 46.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy0gt"]
 atlas = ExtResource("9_1fhlk")
 region = Rect2(16, 0, 16, 16)
@@ -765,6 +769,9 @@ position = Vector2(393, 722)
 datos = SubResource("Resource_0k7y1")
 usar_estatico = true
 textura_estatica = ExtResource("5_vocr7")
+
+[node name="CollisionShape2D" parent="NpcIsle" index="0" unique_id=1163079552]
+shape = SubResource("CapsuleShape2D_2m6dx")
 
 [node name="AnimatedSprite2D" parent="NpcIsle" index="1" unique_id=1133498093]
 sprite_frames = SubResource("SpriteFrames_0k7y1")

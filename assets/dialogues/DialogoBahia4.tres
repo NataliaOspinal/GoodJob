@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://cp4gvxu81v6p0"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_a3nxi"]
+
+[resource]
+script = ExtResource("1_a3nxi")
+nombre_npc = "Juancito Jr."
+dialogos_fase_1 = Array[String](["¿Crees que si incendio la casota mi abuelo se quede a jugar conmigo ping pong? :D"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

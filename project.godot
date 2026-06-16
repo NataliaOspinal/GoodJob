@@ -31,6 +31,7 @@ window/handheld/orientation=1
 NPC=""
 Interfaz=""
 Player=""
+MisionFolders=""
 
 [input_devices]
 

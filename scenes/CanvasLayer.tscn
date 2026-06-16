@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cbq44tv8j7cm0" path="res://assets/ui/icono V de costado.png" id="6_colgv"]
 [ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="7_wwnl4"]
 [ext_resource type="PackedScene" uid="uid://c2ybriy4w6d7y" path="res://scenes/PantallaCV.tscn" id="8_pahpa"]
+[ext_resource type="Texture2D" uid="uid://cmr1u1k71mvqb" path="res://assets/art/FolderAzul.png" id="9_8lqd1"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=170823451 groups=["Interfaz"]]
 layer = 2
@@ -94,6 +95,28 @@ metadata/_edit_use_anchors_ = true
 [node name="PantallaCv" parent="." unique_id=794446974 instance=ExtResource("8_pahpa")]
 visible = false
 z_index = 10
+
+[node name="ContadorFolders" type="HBoxContainer" parent="." unique_id=222661609]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -203.0
+offset_top = -95.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="ContadorFolders" unique_id=454172650]
+layout_mode = 2
+texture = ExtResource("9_8lqd1")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ContadorFolders" unique_id=937175548]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "0 / 5"
+vertical_alignment = 2
 
 [connection signal="pressed" from="MarginContainer/SistemaMisiones/BotonAbrir" to="MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]

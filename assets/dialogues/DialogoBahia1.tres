@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://bfly46od60vxa"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_x5yu5"]
+
+[resource]
+script = ExtResource("1_x5yu5")
+nombre_npc = "Carlita"
+dialogos_fase_1 = Array[String](["¿Dónde está...", "¡Oh, hola! Recién te veo por aquí, espero que la pases bien :)"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

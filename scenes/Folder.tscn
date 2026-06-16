@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axusy"]
 size = Vector2(22, 18)
 
-[node name="Folder" type="Area2D" unique_id=1985544752]
+[node name="Folder" type="Area2D" unique_id=1985544752 groups=["FoldersActivos", "MisionFolders"]]
 script = ExtResource("1_4sc02")
 img_azul = ExtResource("2_axusy")
 img_rojo = ExtResource("3_c576k")
