@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://2rodlc2w4g8m"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_ve7ql"]
+
+[resource]
+script = ExtResource("1_ve7ql")
+nombre_npc = "Maria"
+dialogos_fase_1 = Array[String](["AAAAAA"])
+dialogos_fase_2 = Array[String](["¡Gracias por venir por mí!"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

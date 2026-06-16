@@ -44,7 +44,6 @@ func _cerrar_cv() -> void:
 	
 	tween.tween_callback(hide)
 
-# --- NUEVA FUNCIÓN INTERNA PARA GESTIONAR LOS ICONOS ---
 func _actualizar_habilidades() -> void:
 	# Por defecto, ocultamos las habilidades específicas
 	logo_powerbi.hide()

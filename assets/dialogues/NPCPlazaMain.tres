@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://c21u7npb6ox4u"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_w72oe"]
+
+[resource]
+script = ExtResource("1_w72oe")
+nombre_npc = "Florinda"
+es_npc_especial = true
+id_evento = "estampida_npcs"
+dialogos_fase_1 = Array[String](["¡Todos aquí están al borde del colapso mental!", "Ayúdame a entenderlos, o yo también...", "AAAAAAAAAA"])
+dialogo_recordatorio = Array[String](["Por favor, traelos de vuelta"])
+dialogos_fase_2 = Array[String](["Me alegro que hayas podido escucharlos.", "Espero que no te haya causado tantos problemas..."])
+dialogo_bucle_final = Array[String](["¡Gracias!"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

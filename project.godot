@@ -32,6 +32,7 @@ NPC=""
 Interfaz=""
 Player=""
 MisionFolders=""
+GestorEventos=""
 
 [input_devices]
 
