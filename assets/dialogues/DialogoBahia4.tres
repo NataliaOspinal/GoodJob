@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_a3nxi")
 nombre_npc = "Juancito Jr."
-dialogos_fase_1 = Array[String](["¿Crees que si incendio la casota mi abuelo se quede a jugar conmigo ping pong? :D"])
+dialogos_fase_1 = Array[String](["Oye...", "¿Crees que si incendio la casota mi abuelo", "se quede a jugar conmigo ping pong? :D"])
 metadata/_custom_type_script = "uid://db28wcqw17br3"
