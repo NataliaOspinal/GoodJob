@@ -640,7 +640,7 @@ sources/1 = SubResource("TileSetAtlasSource_d2826")
 
 [sub_resource type="Resource" id="Resource_0k7y1"]
 script = ExtResource("5_hogs0")
-dialogos_fase_1 = Array[String](["Iniciando sistema A.I.D.A... ", "Escaneando currículum del candidato...", "Datos procesados.", "Has adquirido sólidas habilidades blandas y técnicas.", "Match del 98% encontrado", "Perfil óptimo para Analista de Marketing Retail.", "Tu ruta de empleabilidad ha sido completada con éxito.", "Estás listo para la industria.", "¡Felicidades y gracias por jugar!"])
+dialogos_fase_1 = Array[String](["Iniciando sistema A.I.D.A... ", "Escaneando currículum del candidato...", "Datos procesados", "Has adquirido sólidas habilidades blandas y técnicas", "Match del 98% encontrado", "Perfil óptimo para Analista de Marketing Retail", "Tu ruta de empleabilidad ha sido completada con éxito", "Estás listo para la industria", "¡Felicidades y gracias por jugar!"])
 metadata/_custom_type_script = "uid://db28wcqw17br3"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy0gt"]

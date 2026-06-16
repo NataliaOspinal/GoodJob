@@ -5,9 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="2_rfscu"]
 [ext_resource type="Texture2D" uid="uid://b6ug3llgj4se5" path="res://assets/art/nestor.png" id="3_8xaq6"]
 [ext_resource type="Script" uid="uid://b1jairttcogi6" path="res://scripts/teletransporteIslas.gd" id="3_gacct"]
-[ext_resource type="Texture2D" uid="uid://b74wwfwbfg45g" path="res://icon.svg" id="3_puia7"]
 [ext_resource type="SpriteFrames" uid="uid://b8le86dnd7lq" path="res://assets/art/characters/Bote.tres" id="3_vvo0y"]
+[ext_resource type="Texture2D" uid="uid://d3b7obu7s8qgm" path="res://assets/art/tiles/utpisla.png" id="7_0n4wa"]
+[ext_resource type="Texture2D" uid="uid://b4xhp3cu8txo7" path="res://assets/art/tiles/islabahia.png" id="8_666lb"]
 [ext_resource type="PackedScene" uid="uid://1wnndddtrrir" path="res://scenes/CanvasLayer.tscn" id="8_b5655"]
+[ext_resource type="Texture2D" uid="uid://bebctuc0aooo0" path="res://assets/art/tiles/islafinal.png" id="9_666lb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfscu"]
 texture = ExtResource("1_c3gql")
@@ -506,7 +508,7 @@ sources/1 = SubResource("TileSetAtlasSource_dysil")
 distance = 19.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gacct"]
-radius = 92.779305
+radius = 58.249462
 
 [node name="Overworld" type="Node2D" unique_id=1688907641]
 script = ExtResource("1_8xaq6")
@@ -553,13 +555,15 @@ rotation = 4.712389
 shape = SubResource("WorldBoundaryShape2D_rfscu")
 
 [node name="PortalIslaMain" type="Area2D" parent="." unique_id=1940700831 node_paths=PackedStringArray("punto_aparicion")]
-position = Vector2(407, 863)
+position = Vector2(242, 1231)
 script = ExtResource("3_gacct")
 ruta_destino = "uid://sxn2y683eflf"
 punto_aparicion = NodePath("PuntoAparicion")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortalIslaMain" unique_id=2014740104]
-texture = ExtResource("3_puia7")
+position = Vector2(0.99999493, -6.249981)
+scale = Vector2(3.766, 3.75)
+texture = ExtResource("7_0n4wa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalIslaMain" unique_id=1337579825]
 shape = SubResource("CircleShape2D_gacct")
@@ -568,13 +572,14 @@ shape = SubResource("CircleShape2D_gacct")
 position = Vector2(0, 122)
 
 [node name="PortalIslaMain2" type="Area2D" parent="." unique_id=431301022 node_paths=PackedStringArray("punto_aparicion")]
-position = Vector2(797, 570)
+position = Vector2(146, 736)
 script = ExtResource("3_gacct")
 ruta_destino = "uid://6cs72o8rtqoj"
 punto_aparicion = NodePath("PuntoAparicion")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortalIslaMain2" unique_id=1795826545]
-texture = ExtResource("3_puia7")
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("8_666lb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalIslaMain2" unique_id=1905428017]
 shape = SubResource("CircleShape2D_gacct")
@@ -583,13 +588,14 @@ shape = SubResource("CircleShape2D_gacct")
 position = Vector2(0, 122)
 
 [node name="PortalIslaMain3" type="Area2D" parent="." unique_id=1268074458 node_paths=PackedStringArray("punto_aparicion")]
-position = Vector2(1196, 860)
+position = Vector2(312, 266)
 script = ExtResource("3_gacct")
 ruta_destino = "uid://fxwk7x65eosu"
 punto_aparicion = NodePath("PuntoAparicion")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortalIslaMain3" unique_id=344124509]
-texture = ExtResource("3_puia7")
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("9_666lb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortalIslaMain3" unique_id=1549703198]
 shape = SubResource("CircleShape2D_gacct")
