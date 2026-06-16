@@ -63,3 +63,4 @@ label_settings = SubResource("LabelSettings_tgans")
 
 [node name="AudioTap" type="AudioStreamPlayer" parent="." unique_id=432654844]
 stream = ExtResource("1_rc1id")
+volume_db = -5.0
