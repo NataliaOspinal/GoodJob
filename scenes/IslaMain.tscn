@@ -12,50 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://balkg53mxeojl" path="res://assets/art/tiles/EDIFICIO UTP.png" id="16_1b3s5"]
 [ext_resource type="PackedScene" uid="uid://cubc5ohb220re" path="res://scenes/boteIsla.tscn" id="17_17x8p"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohx42"]
-texture = ExtResource("4_lo71r")
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.587101, -8, 8, -8, 8, 8, 3.587101, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -3.5226393, -8, -3.488824, 8, -8, 8)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.587101, -8, 8, -8, 8, 8, 3.587101, 8)
-1:2/0 = 0
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -3.5226393, -8, -3.488824, 8, -8, 8)
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.587101, -8, 8, -8, 8, 8, 3.587101, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -3.5226393, -8, -3.488824, 8, -8, 8)
-3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-0:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d2826"]
 texture = ExtResource("6_17x8p")
 0:0/0 = 0
@@ -684,7 +640,6 @@ texture = ExtResource("6_17x8p")
 
 [sub_resource type="TileSet" id="TileSet_iyc47"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ohx42")
 sources/1 = SubResource("TileSetAtlasSource_d2826")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o87ba"]

@@ -6,8 +6,6 @@ extends CanvasLayer
 @onready var boton_cv: TextureButton = $MarginContainer/HBoxContainer/BotonCV
 @onready var pantalla_cv = $PantallaCv
 
-@onready var audio_dialogo: AudioStreamPlayer = $AudioDialogo 
-
 var emisor_actual: Node = null
 var dialogo_actual: Array[String] = []
 var indice_dialogo: int = 0
@@ -17,7 +15,6 @@ func _ready() -> void:
 	touch_area_y_end = get_viewport().get_visible_rect().size.y / 3.0
 	caja_dialogo.hide()
 	boton_cv.pressed.connect(_al_presionar_boton_cv)
-	
 
 func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
 	if lineas.size() == 0: 
@@ -30,16 +27,10 @@ func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
 	caja_dialogo.show()
 	caja_dialogo.mostrar_texto(dialogo_actual[indice_dialogo])
 	
-	if audio_dialogo.stream: 
-		audio_dialogo.play() 
-	
 func _siguiente_linea() -> void:
 	indice_dialogo += 1
 	if indice_dialogo < dialogo_actual.size():
 		caja_dialogo.mostrar_texto(dialogo_actual[indice_dialogo])
-		
-		if audio_dialogo.stream: 
-			audio_dialogo.play()
 	else:
 		caja_dialogo.hide()
 
