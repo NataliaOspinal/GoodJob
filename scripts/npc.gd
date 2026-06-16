@@ -1,5 +1,6 @@
 extends CharacterBody2D
 signal fue_tocado_por_jugador(nodo_npc)
+signal dialogo_cerrado(nodo_npc)
 enum NpcType { IDLE, PATROL, CONTROL_EXTERNO }
 enum EstadoMision { ANTES_DEL_EVENTO, EVENTO_EN_PROGRESO, LISTO_PARA_FINALIZAR, COMPLETADO }
 
@@ -134,6 +135,7 @@ func _al_presionar_popin() -> void:
 			get_tree().call_group("Interfaz", "iniciar_dialogo_npc", datos.dialogo_bucle_final, self)
 
 func on_dialogo_terminado() -> void:
+	dialogo_cerrado.emit(self)
 	if datos != null and datos.es_npc_especial:
 		match estado_actual:
 			EstadoMision.ANTES_DEL_EVENTO:
