@@ -21,14 +21,28 @@ var errores_recolectados: int = 0
 
 func registrar_item_recogido() -> void:
 	items_recolectados += 1
-	print("Items: ", items_recolectados, "/", meta_items)
+	get_tree().call_group("Interfaz", "actualizar_contador_folders", items_recolectados, meta_items)
+	
 	if items_recolectados >= meta_items:
 		mision_resuelta = true
-		print("¡Misión lista para ser entregada!")
+		print("¡Misión completada!")
+		_terminar_minijuego_folders()
 	
 func registrar_error_carpeta() -> void:
 	errores_recolectados += 1
 	print("Carpetas incorrectas: ", errores_recolectados, "/3")
 	
 	if errores_recolectados >= 3:
+		print("¡Minijuego fallido!")
+		_terminar_minijuego_folders()
 		get_tree().call_deferred("call_group", "GestorEventos", "reiniciar_mision_folders")
+
+func _terminar_minijuego_folders() -> void:
+	get_tree().call_group("Interfaz", "mostrar_contador_folders", false)
+	get_tree().call_group("FoldersActivos", "queue_free")
+
+func desbloquear_habilidad(nueva_habilidad: String) -> void:
+	if nueva_habilidad != "" and not nueva_habilidad in habilidades_desbloqueadas:
+		habilidades_desbloqueadas.append(nueva_habilidad)
+		print("¡Éxito! Habilidad guardada en la memoria global: ", nueva_habilidad)
+		print("Inventario actual: ", habilidades_desbloqueadas)

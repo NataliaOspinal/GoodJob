@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://bffrapqi33xwo"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_h1uyu"]
+
+[resource]
+script = ExtResource("1_h1uyu")
+nombre_npc = "Sr. Incognito"
+dialogos_fase_1 = Array[String](["Últimamente he tenido grandes ideas para mi empresa...", "¡Tan solo ayer sacamos un nuevo vino!", "¡para gatos! Absolutamente revolucionario."])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

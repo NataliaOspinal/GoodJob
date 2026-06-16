@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosNPC" format=3 uid="uid://cp41xv3wv48f4"]
+
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="1_b0ari"]
+
+[resource]
+script = ExtResource("1_b0ari")
+nombre_npc = "Don Juan"
+dialogos_fase_1 = Array[String](["Recuerda siempre la importancia del manejo de datos...", "Puede salvar tus proyectos de fracasar antes de empezar.", "...", "Los días son bastante ocupados aquí.", "Pero nunca monótonos, debo agradecer a mi nieto por ello."])
+metadata/_custom_type_script = "uid://db28wcqw17br3"

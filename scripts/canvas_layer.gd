@@ -5,7 +5,8 @@ extends CanvasLayer
 @onready var caja_dialogo: Panel = $CajaDialogo
 @onready var boton_cv: TextureButton = $MarginContainer/HBoxContainer/BotonCV
 @onready var pantalla_cv = $PantallaCv
-
+@onready var contenedor_folders: HBoxContainer = $ContadorFolders
+@onready var label_folders: Label = $ContadorFolders/Label
 var emisor_actual: Node = null
 var dialogo_actual: Array[String] = []
 var indice_dialogo: int = 0
@@ -15,6 +16,7 @@ func _ready() -> void:
 	touch_area_y_end = get_viewport().get_visible_rect().size.y / 3.0
 	caja_dialogo.hide()
 	boton_cv.pressed.connect(_al_presionar_boton_cv)
+	contenedor_folders.hide()
 
 func iniciar_dialogo_npc(lineas: Array[String], emisor_nodo: Node) -> void:
 	if lineas.size() == 0: 
@@ -62,3 +64,9 @@ func _ocultar_ui() -> void:
 func _al_presionar_boton_cv() -> void:
 	print("¡El botón detectó el clic!")
 	pantalla_cv.mostrar_cv()
+	
+func mostrar_contador_folders(mostrar: bool) -> void:
+	contenedor_folders.visible = mostrar
+
+func actualizar_contador_folders(actual: int, meta: int) -> void:
+	label_folders.text = str(actual) + " / " + str(meta)

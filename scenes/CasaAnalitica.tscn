@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d4haisoxnaofi"]
+
+[ext_resource type="Texture2D" uid="uid://dytkxk3646w05" path="res://assets/art/tiles/CasaFea.png" id="1_8l0wl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l0wl"]
+size = Vector2(51.5, 28)
+
+[node name="CasaFea" type="StaticBody2D" unique_id=1575850603]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1705375605]
+texture = ExtResource("1_8l0wl")
+offset = Vector2(0, -28.735)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=86271248]
+position = Vector2(0.75, -13)
+shape = SubResource("RectangleShape2D_8l0wl")
