@@ -6,9 +6,8 @@ extends Control
 @onready var btn_toque_cerrar: Button = $BtnToqueCerrar
 @onready var audio_cv: AudioStreamPlayer = $AudioCV
 
-# --- NUEVAS REFERENCIAS A TUS HABILIDADES ---
 @onready var logo_powerbi = $FondoCV/Powerbilogo
-@onready var logo_escucha_activa = $FondoCV/Label6 # Ajusta este nombre si es necesario
+@onready var logo_escucha_activa = $FondoCV/Label6
 
 func _ready() -> void:
 	visible = false

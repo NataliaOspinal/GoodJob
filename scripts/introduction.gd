@@ -110,10 +110,11 @@ func _reproducir_sonido() -> void:
 func _cargar_dialogo_actual() -> void:
 	if indice_actual < dialogos.size():
 		var texto_a_mostrar = dialogos[indice_actual]
-		if indice_actual == 15 :
+		
+		if indice_actual == 15 or indice_actual == 22:
 			texto_a_mostrar = texto_a_mostrar % GameManager.nombre_jugador
 			profesor.texture = alba_sorprendida
-		elif indice_actual == 16 or indice_actual == 17 or indice_actual == 19 or indice_actual == 20 or indice_actual == 22:
+		elif indice_actual == 16 or indice_actual == 17 or indice_actual == 19 or indice_actual == 20:
 			profesor.texture = alba_normal
 		elif indice_actual == 18 or indice_actual == 21:
 			profesor.texture = alba_sorprendida
