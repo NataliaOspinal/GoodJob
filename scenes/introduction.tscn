@@ -578,3 +578,4 @@ stretch_mode = 5
 
 [node name="AudioBoton" type="AudioStreamPlayer" parent="." unique_id=115198298]
 stream = ExtResource("1_fiwxd")
+volume_db = -5.0
