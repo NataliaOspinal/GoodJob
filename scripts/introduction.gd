@@ -2,7 +2,7 @@ extends Control
 
 @onready var caja_dialogo = $CajaDialogo
 @onready var profesor: TextureRect = $MarcoProfesor/Profesor
-@onready var cv_profesor: ColorRect = $CVProfesor 
+@onready var cv_profesor: TextureRect = $CVProfesor
 @onready var contenedor_ui: Control = $ContenedorUI
 @onready var fondo_intro: TextureRect = $Fondo
 @onready var fondo_interactivo: TextureRect = $FondoInteractivo
@@ -278,4 +278,4 @@ func _ir_a_gameplay() -> void:
 	tween.tween_property(fade_final, "modulate:a", 1.0, 1.0)
 	await tween.finished
 	
-	get_tree().change_scene_to_file("res://Scenes/overworld.tscn")
+	get_tree().change_scene_to_file("res://scenes/IslaMain.tscn")

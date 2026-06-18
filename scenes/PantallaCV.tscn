@@ -95,10 +95,10 @@ text = "Power BI"
 
 [node name="Label6" type="Label" parent="FondoCV" unique_id=1836617834]
 layout_mode = 0
-offset_left = 492.0
-offset_top = 691.0
-offset_right = 636.0
-offset_bottom = 728.0
+offset_left = 449.0
+offset_top = 691.25
+offset_right = 593.0
+offset_bottom = 728.25
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_jnnbn")
 theme_override_font_sizes/font_size = 36
@@ -176,7 +176,7 @@ scale = Vector2(3.2343738, 3.2499948)
 texture = ExtResource("4_en43h")
 
 [node name="Mercado" type="Sprite2D" parent="FondoCV" unique_id=1466292478]
-position = Vector2(442, 710)
+position = Vector2(399, 710.25)
 scale = Vector2(4.249999, 3.6562524)
 texture = ExtResource("5_i5uyj")
 

@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://b06mw13cqs0of"]
 
 [ext_resource type="Script" uid="uid://5mmhqd15dek" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://b5l2oh2rcl3af" path="res://assets/art/ASCENSO.png" id="2_ekxnf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
 font_size = 32
@@ -31,22 +35,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Titulo" type="Label" parent="SeccionMenu" unique_id=1478612443]
+[node name="FondoPortada" type="TextureRect" parent="SeccionMenu" unique_id=1167511821]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -259.755
-offset_right = 150.00006
-offset_bottom = 35.245483
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = 3.0
+offset_right = 399.75854
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 106
-text = "Good 
-   Job"
+texture = ExtResource("2_ekxnf")
+expand_mode = 3
 
 [node name="BotonEmpezar" type="Button" parent="SeccionMenu" unique_id=1712182463]
 layout_mode = 1
@@ -55,13 +56,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 147.45502
-offset_right = 150.0
-offset_bottom = 178.45502
+offset_left = -210.0
+offset_top = 124.0
+offset_right = 233.0
+offset_bottom = 301.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Empezar"
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
 
 [node name="SeccionPreIntro" type="Control" parent="." unique_id=710858939]
 layout_mode = 1
@@ -71,6 +72,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="FondoNegro" type="ColorRect" parent="SeccionPreIntro" unique_id=704623788]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="ContenedorTexto" type="Panel" parent="SeccionPreIntro" unique_id=413947416]
 self_modulate = Color(1, 1, 1, 0)

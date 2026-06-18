@@ -9,6 +9,39 @@
 [ext_resource type="PackedScene" uid="uid://nauf1eunuppm" path="res://scenes/dialogue_box.tscn" id="7_wwnl4"]
 [ext_resource type="PackedScene" uid="uid://c2ybriy4w6d7y" path="res://scenes/PantallaCV.tscn" id="8_pahpa"]
 [ext_resource type="Texture2D" uid="uid://cmr1u1k71mvqb" path="res://assets/art/FolderAzul.png" id="9_8lqd1"]
+[ext_resource type="FontFile" uid="uid://djtyf8a42fe5f" path="res://assets/fonts/PixelOperatorMonoHB.ttf" id="10_xcu7p"]
+[ext_resource type="FontFile" uid="uid://bhu13vtpy525o" path="res://assets/fonts/PixelOperatorMono.ttf" id="11_jhf2d"]
+[ext_resource type="Texture2D" uid="uid://gw81u7dlh38x" path="res://assets/art/mapaislas.png" id="12_colgv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_colgv"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhf2d"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7632614, 0.25298315, 0.13496834, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_colgv"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=170823451 groups=["Interfaz"]]
 layer = 2
@@ -73,6 +106,14 @@ offset_top = 89.0
 offset_right = 257.0
 offset_bottom = 259.0
 
+[node name="TextoMision" type="Label" parent="MarginContainer/SistemaMisiones/CuadroMisiones" unique_id=2119301093]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 138.0
+offset_right = 254.0
+offset_bottom = 260.0
+autowrap_mode = 2
+
 [node name="UITimer" type="Timer" parent="." unique_id=314889211]
 wait_time = 3.0
 one_shot = true
@@ -114,9 +155,105 @@ expand_mode = 3
 
 [node name="Label" type="Label" parent="ContadorFolders" unique_id=937175548]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("10_xcu7p")
+theme_override_font_sizes/font_size = 36
 text = "0 / 5"
 vertical_alignment = 2
+
+[node name="MenuOpciones" type="Panel" parent="." unique_id=897762281]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.5
+offset_top = -66.5
+offset_right = 179.5
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_colgv")
+
+[node name="TextoPregunta" type="Label" parent="MenuOpciones" unique_id=2105962482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -77.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_jhf2d")
+theme_override_font_sizes/font_size = 23
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuOpciones" unique_id=1027557514]
+layout_mode = 0
+offset_left = 5.5
+offset_top = 56.5
+offset_right = 353.5
+offset_bottom = 128.5
+
+[node name="BtnOpcionA" type="Button" parent="MenuOpciones/VBoxContainer" unique_id=1143281081]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_jhf2d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhf2d")
+text_overrun_behavior = 4
+
+[node name="BtnOpcionB" type="Button" parent="MenuOpciones/VBoxContainer" unique_id=514990584]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_jhf2d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhf2d")
+text_overrun_behavior = 4
+
+[node name="PantallaMapa" type="Control" parent="." unique_id=1356136038]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PantallaMapa" unique_id=1405087505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="ImagenMapa" type="TextureRect" parent="PantallaMapa" unique_id=1518177598]
+custom_minimum_size = Vector2(-3.64, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -313.0
+offset_top = -512.0
+offset_right = 328.0
+offset_bottom = 509.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_colgv")
+expand_mode = 1
+
+[node name="BtnCerrarMapa" type="Button" parent="PantallaMapa" unique_id=2112395297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_colgv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_colgv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_colgv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_colgv")
 
 [connection signal="pressed" from="MarginContainer/SistemaMisiones/BotonAbrir" to="MarginContainer/SistemaMisiones" method="_al_presionar_abrir"]
 [connection signal="pressed" from="MarginContainer/SistemaMisiones/CuadroMisiones/BotonCerrar" to="MarginContainer/SistemaMisiones" method="_al_presionar_cerrar"]

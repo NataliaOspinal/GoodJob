@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://p1hq06y2byx2"]
+
+[ext_resource type="Script" uid="uid://m2ybje62yup5" path="res://scripts/transicion.gd" id="1_erb53"]
+[ext_resource type="AudioStream" uid="uid://c05br33edn8mg" path="res://assets/music/sounds/entrada.wav" id="1_kk8xt"]
+[ext_resource type="Shader" uid="uid://be07jo6h810ds" path="res://scripts/Transicion.gdshader" id="1_vnckk"]
+[ext_resource type="AudioStream" uid="uid://3tb3jhbtfsei" path="res://assets/music/sounds/salida.wav" id="2_vnckk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_erb53"]
+shader = ExtResource("1_vnckk")
+shader_parameter/pixelacion = 0.001
+shader_parameter/oscuridad = 0.0
+
+[node name="Transicion" type="CanvasLayer" unique_id=1684061921]
+layer = 100
+script = ExtResource("1_erb53")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=17594188]
+material = SubResource("ShaderMaterial_erb53")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AudioEntrada" type="AudioStreamPlayer" parent="." unique_id=1271914328]
+stream = ExtResource("1_kk8xt")
+
+[node name="AudioSalida" type="AudioStreamPlayer" parent="." unique_id=1396098696]
+stream = ExtResource("2_vnckk")

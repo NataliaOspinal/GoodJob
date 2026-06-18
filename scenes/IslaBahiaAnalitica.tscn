@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dye5gvmqu2m4a" path="res://scenes/Folder.tscn" id="19_o1vou"]
 [ext_resource type="SpriteFrames" uid="uid://bae0bw7hagled" path="res://assets/art/npcs/NPCMorada.tres" id="21_4hg0a"]
 [ext_resource type="PackedScene" uid="uid://cubc5ohb220re" path="res://scenes/boteIsla.tscn" id="22_f1m12"]
+[ext_resource type="AudioStream" uid="uid://dv77uye1kbmg2" path="res://assets/music/Isla2.mp3" id="26_jgvbx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d2826"]
 texture = ExtResource("8_f1m12")
@@ -854,5 +855,10 @@ texture = SubResource("CompressedTexture2D_7wiam")
 z_index = 1
 position = Vector2(-3, 51.5)
 shape = SubResource("RectangleShape2D_7wiam")
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=1740508539]
+stream = ExtResource("26_jgvbx")
+volume_db = -10.844
+autoplay = true
 
 [editable path="Casas/CasaFea9"]

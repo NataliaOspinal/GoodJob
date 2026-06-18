@@ -9,6 +9,6 @@ es_npc_especial = true
 id_evento = "spawn_folders_azules"
 dialogos_fase_1 = Array[String](["¡Ayuda! La campaña está fallando...", "¿Es porque somos muy generales en nuestra audiencia?", "¡Necesito que me ayudes a encontrar datos de mi público objetivo!", "¡Traéme todos los folders AZULES!", "... Por favor"])
 dialogo_recordatorio = Array[String](["Aún me faltan folders azules. ¡Fíjate bien en el color!"])
-dialogos_fase_2 = Array[String](["¡Excelente trabajo! Con esto podré recuperarme."])
+dialogos_fase_2 = Array[String](["¡Excelente trabajo! Con esto podré recuperarme.", "Si aun no has ido, ve a entrenar tus habilidades blandas", "Te sera de gran ayuda!"])
 dialogo_bucle_final = Array[String](["Gracias por salvarme con esos expedientes."])
 metadata/_custom_type_script = "uid://db28wcqw17br3"

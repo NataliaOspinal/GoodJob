@@ -9,7 +9,7 @@ radius = 5.0
 height = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4xjx3"]
-radius = 30.0
+radius = 20.09975
 
 [node name="NpcIsle" type="CharacterBody2D" unique_id=2079635334 groups=["NPC"]]
 script = ExtResource("1_4xjx3")

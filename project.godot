@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://bedmuoydbaddb"
+Transicion="*uid://p1hq06y2byx2"
 
 [display]
 

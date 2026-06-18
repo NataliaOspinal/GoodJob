@@ -31,7 +31,6 @@ func _ready() -> void:
 	if icono_popin_personalizado != null:
 		boton_popin.texture_normal = icono_popin_personalizado
 		
-	# Configuración Visual
 	if usar_estatico:
 		anim.hide()
 		sprite.show()
@@ -73,20 +72,18 @@ func _physics_process(delta: float) -> void:
 			if path_follow.progress_ratio <= 0.0:
 				moving_forward = true
 				
-		# --- LÓGICA DE 4 DIRECCIONES ---
 		var direction = global_position - old_pos
 		if direction.length() > 0.1: # Si nos movimos
 			_update_animations(direction)
 
 func _update_animations(direction: Vector2) -> void:
 	if usar_estatico:
-		# Si es una estatua o imagen fija, solo lo volteamos
 		sprite.flip_h = (direction.x < 0)
 		return
 		
 	if abs(direction.x) > abs(direction.y):
 		anim.play("Left")
-		anim.flip_h = (direction.x > 0) # Lo volteamos si va a la derecha
+		anim.flip_h = (direction.x > 0)
 	else:
 		if direction.y < 0:
 			anim.play("Up")
@@ -94,7 +91,6 @@ func _update_animations(direction: Vector2) -> void:
 			anim.play("Down")
 		anim.flip_h = false
 
-# Logica de interaccion y eventos
 func _al_jugador_entrar(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		if modo_interaccion_fisica:
@@ -118,12 +114,10 @@ func _al_presionar_popin() -> void:
 	if datos == null:
 		return
 		
-	# Si NO es especial, simplemente lee los textos de la Fase 1 como un diálogo normal
 	if not datos.es_npc_especial:
 		get_tree().call_group("Interfaz", "iniciar_dialogo_npc", datos.dialogos_fase_1, self)
 		return
 		
-	# Si SÍ es especial, navega por las fases
 	match estado_actual:
 		EstadoMision.ANTES_DEL_EVENTO:
 			get_tree().call_group("Interfaz", "iniciar_dialogo_npc", datos.dialogos_fase_1, self)
@@ -141,7 +135,6 @@ func on_dialogo_terminado() -> void:
 			EstadoMision.ANTES_DEL_EVENTO:
 				estado_actual = EstadoMision.EVENTO_EN_PROGRESO
 				if datos.id_evento != "":
-					# Avisamos que el evento INICIA
 					get_tree().call_group("GestorEventos", "ejecutar_evento", datos.id_evento)
 					
 			EstadoMision.LISTO_PARA_FINALIZAR:

@@ -11,4 +11,7 @@ dialogos_fase_1 = Array[String](["¡Todos aquí están al borde del colapso ment
 dialogo_recordatorio = Array[String](["Por favor, traelos de vuelta"])
 dialogos_fase_2 = Array[String](["Me alegro que hayas podido escucharlos.", "Espero que no te haya causado tantos problemas..."])
 dialogo_bucle_final = Array[String](["¡Gracias!"])
+pregunta_panico = "¡La cola da la vuelta a la tienda, el sistema de cobro está lentísimo y los clientes me están gritando que me apure! ¡Ya no sé qué hacer, voy a cerrar la caja!"
+opcion_correcta = "Tranquila. Yo paso a la fila para hablar con los clientes y darles cupones. Tú concéntrate solo en cobrar a tu ritmo, no mires la cola."
+opcion_incorrecta = "Respira profundo y cobra más rápido, por favor. Es hora pico y no podemos darnos el lujo de cerrar ninguna caja ahora mismo."
 metadata/_custom_type_script = "uid://db28wcqw17br3"

@@ -7,4 +7,7 @@ script = ExtResource("1_molh6")
 nombre_npc = "Paolito"
 dialogos_fase_1 = Array[String](["AAAAAAAAAAAAAAA"])
 dialogos_fase_2 = Array[String](["Sí, tienes razón!"])
+pregunta_panico = "¡Precios mal, el jefe llega!"
+opcion_correcta = "Quitemos precios, yo ayudo."
+opcion_incorrecta = "¡Imprime otros de inmediato!"
 metadata/_custom_type_script = "uid://db28wcqw17br3"

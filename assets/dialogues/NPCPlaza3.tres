@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_8shdu")
 nombre_npc = "Jhin"
-dialogos_fase_1 = Array[String](["AAAA"])
+dialogos_fase_1 = Array[String](["Tienes la razon"])
 dialogos_fase_2 = Array[String](["Sublime."])
+pregunta_panico = "¡Sin stock, el cliente explotará!"
+opcion_correcta = "Yo hablaré con él."
+opcion_incorrecta = "¡Sigue buscando rápido!"
 metadata/_custom_type_script = "uid://db28wcqw17br3"

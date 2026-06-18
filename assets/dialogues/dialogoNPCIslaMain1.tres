@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_ixt2l")
 nombre_npc = "Pedrito"
+dialogos_fase_1 = Array[String](["Todos se volvieron locos!", "Habla con la jefa, tiene una tarea para ti."])
 metadata/_custom_type_script = "uid://db28wcqw17br3"

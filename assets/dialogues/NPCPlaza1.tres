@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_ve7ql")
 nombre_npc = "Maria"
-dialogos_fase_1 = Array[String](["AAAAAA"])
+dialogos_fase_1 = Array[String](["Ufff... gracias"])
 dialogos_fase_2 = Array[String](["¡Gracias por venir por mí!"])
+pregunta_panico = "¡Web caída y redes ardiendo!"
+opcion_correcta = "Pausa anuncios, yo aviso."
+opcion_incorrecta = "¡Responde los insultos ya!"
 metadata/_custom_type_script = "uid://db28wcqw17br3"

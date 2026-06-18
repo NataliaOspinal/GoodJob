@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_6jn6u"]
 [ext_resource type="Texture2D" uid="uid://b6ug3llgj4se5" path="res://assets/art/nestor.png" id="6_17x8p"]
 [ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_iyc47"]
+[ext_resource type="Script" uid="uid://db28wcqw17br3" path="res://scripts/DatosNPC.gd" id="8_6jn6u"]
 [ext_resource type="PackedScene" uid="uid://1wnndddtrrir" path="res://scenes/CanvasLayer.tscn" id="11_6jn6u"]
-[ext_resource type="Resource" uid="uid://bh2hlvrckei48" path="res://assets/dialogues/dialogoNPCIslaMain1.tres" id="12_crwti"]
+[ext_resource type="AudioStream" uid="uid://dvu6itug2nwda" path="res://assets/music/Isla1.mp3" id="12_crwti"]
 [ext_resource type="Texture2D" uid="uid://balkg53mxeojl" path="res://assets/art/tiles/EDIFICIO UTP.png" id="16_1b3s5"]
 [ext_resource type="PackedScene" uid="uid://cubc5ohb220re" path="res://scenes/boteIsla.tscn" id="17_17x8p"]
 
@@ -1414,11 +1415,22 @@ sources/2 = SubResource("TileSetAtlasSource_gvsgo")
 sources/3 = SubResource("TileSetAtlasSource_1g5w1")
 sources/4 = SubResource("TileSetAtlasSource_jljuy")
 
+[sub_resource type="Resource" id="Resource_6jn6u"]
+script = ExtResource("8_6jn6u")
+dialogos_fase_1 = Array[String](["Me quedare aqui cuidando a mi hermana", "Siempre se le olvida que hay examen el mismo dia"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"
+
 [sub_resource type="Curve2D" id="Curve2D_iyc47"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 103, 1122, 0, 0, 0, 0, 103, 1031, 0, 0, 0, 0, 200, 1031)
 }
 point_count = 3
+
+[sub_resource type="Resource" id="Resource_crwti"]
+script = ExtResource("8_6jn6u")
+nombre_npc = "Pedrito"
+dialogos_fase_1 = Array[String](["Suerte en tu aventura!", "Yo saldria pero, nah, otro dia jaja"])
+metadata/_custom_type_script = "uid://db28wcqw17br3"
 
 [node name="IslaMain" type="Node2D" unique_id=694703998]
 y_sort_enabled = true
@@ -1448,7 +1460,7 @@ tile_set = SubResource("TileSet_iyc47")
 [node name="Player" parent="." unique_id=1371327339 instance=ExtResource("6_6jn6u")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(130, 1093)
+position = Vector2(393, 789)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=865684493]
 zoom = Vector2(4, 4)
@@ -1459,6 +1471,7 @@ limit_bottom = 1390
 
 [node name="NpcIsle2" parent="." unique_id=699312530 instance=ExtResource("7_iyc47")]
 position = Vector2(250, 1020)
+datos = SubResource("Resource_6jn6u")
 
 [node name="RutaNPC" type="Path2D" parent="." unique_id=879632981]
 curve = SubResource("Curve2D_iyc47")
@@ -1469,7 +1482,7 @@ rotates = false
 
 [node name="NpcIsle" parent="RutaNPC/PathFollow2D" unique_id=2079635334 instance=ExtResource("7_iyc47")]
 type = 1
-datos = ExtResource("12_crwti")
+datos = SubResource("Resource_crwti")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=587448131]
 z_index = 1
@@ -1489,3 +1502,8 @@ polygon = PackedVector2Array(297, 754, 297, 664, 488, 665, 489, 753, 473, 753, 4
 position = Vector2(18, 1214)
 
 [node name="CanvasLayer" parent="." unique_id=170823451 instance=ExtResource("11_6jn6u")]
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=1384503403]
+stream = ExtResource("12_crwti")
+volume_db = -11.472
+autoplay = true

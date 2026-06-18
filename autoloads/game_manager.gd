@@ -18,8 +18,12 @@ var items_recolectados: int = 0
 var meta_items: int = 15
 var mision_resuelta: bool = false
 var errores_recolectados: int = 0
+var snd_buen_folder = preload("res://assets/music/sounds/buenfolder.wav") 
+var snd_mal_folder = preload("res://assets/music/sounds/malfolder.wav")   
+var snd_nueva_hab = preload("res://assets/music/sounds/nuevahabilidad.wav") 
 
 func registrar_item_recogido() -> void:
+	reproducir_sfx(snd_buen_folder)
 	items_recolectados += 1
 	get_tree().call_group("Interfaz", "actualizar_contador_folders", items_recolectados, meta_items)
 	
@@ -29,6 +33,7 @@ func registrar_item_recogido() -> void:
 		_terminar_minijuego_folders()
 	
 func registrar_error_carpeta() -> void:
+	reproducir_sfx(snd_mal_folder)
 	errores_recolectados += 1
 	print("Carpetas incorrectas: ", errores_recolectados, "/3")
 	
@@ -41,8 +46,23 @@ func _terminar_minijuego_folders() -> void:
 	get_tree().call_group("Interfaz", "mostrar_contador_folders", false)
 	get_tree().call_group("FoldersActivos", "queue_free")
 
+func reproducir_sfx(sonido: AudioStream) -> void:
+	if sonido == null: return
+	var reproductor = AudioStreamPlayer.new()
+	reproductor.stream = sonido
+	add_child(reproductor)
+	reproductor.play()
+	reproductor.finished.connect(reproductor.queue_free)
+
+
 func desbloquear_habilidad(nueva_habilidad: String) -> void:
 	if nueva_habilidad != "" and not nueva_habilidad in habilidades_desbloqueadas:
+		reproducir_sfx(snd_nueva_hab)
 		habilidades_desbloqueadas.append(nueva_habilidad)
+		
+		if nueva_habilidad == "PowerBI":
+			cv_tech_skills_desbloqueado = true
+		elif nueva_habilidad == "Escucha Activa": 
+			cv_soft_skills_desbloqueado = true
 		print("¡Éxito! Habilidad guardada en la memoria global: ", nueva_habilidad)
 		print("Inventario actual: ", habilidades_desbloqueadas)

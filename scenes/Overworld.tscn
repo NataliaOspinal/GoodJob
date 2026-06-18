@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b4xhp3cu8txo7" path="res://assets/art/tiles/islabahia.png" id="8_666lb"]
 [ext_resource type="PackedScene" uid="uid://1wnndddtrrir" path="res://scenes/CanvasLayer.tscn" id="8_b5655"]
 [ext_resource type="Texture2D" uid="uid://bebctuc0aooo0" path="res://assets/art/tiles/islafinal.png" id="9_666lb"]
+[ext_resource type="Texture2D" uid="uid://txmv0j3lkjl0" path="res://assets/art/tiles/islaplaza.png" id="10_m38k2"]
+[ext_resource type="AudioStream" uid="uid://drl0yg1oecvvc" path="res://assets/music/Overworld.mp3" id="12_ff6um"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfscu"]
 texture = ExtResource("1_c3gql")
@@ -572,7 +574,7 @@ shape = SubResource("CircleShape2D_gacct")
 position = Vector2(0, 122)
 
 [node name="PortalIslaMain2" type="Area2D" parent="." unique_id=431301022 node_paths=PackedStringArray("punto_aparicion")]
-position = Vector2(146, 736)
+position = Vector2(144, 649)
 script = ExtResource("3_gacct")
 ruta_destino = "uid://6cs72o8rtqoj"
 punto_aparicion = NodePath("PuntoAparicion")
@@ -588,7 +590,7 @@ shape = SubResource("CircleShape2D_gacct")
 position = Vector2(0, 122)
 
 [node name="PortalIslaMain3" type="Area2D" parent="." unique_id=1268074458 node_paths=PackedStringArray("punto_aparicion")]
-position = Vector2(312, 266)
+position = Vector2(481, 329)
 script = ExtResource("3_gacct")
 ruta_destino = "uid://fxwk7x65eosu"
 punto_aparicion = NodePath("PuntoAparicion")
@@ -603,10 +605,32 @@ shape = SubResource("CircleShape2D_gacct")
 [node name="PuntoAparicion" type="Marker2D" parent="PortalIslaMain3" unique_id=1389816917]
 position = Vector2(0, 122)
 
+[node name="PortalIslaMain4" type="Area2D" parent="." unique_id=361722334 node_paths=PackedStringArray("punto_aparicion")]
+position = Vector2(509, 914)
+script = ExtResource("3_gacct")
+ruta_destino = "uid://qi7ncsyf8feg"
+punto_aparicion = NodePath("PuntoAparicion")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalIslaMain4" unique_id=1597662965]
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("10_m38k2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalIslaMain4" unique_id=386075249]
+shape = SubResource("CircleShape2D_gacct")
+
+[node name="PuntoAparicion" type="Marker2D" parent="PortalIslaMain4" unique_id=1394334455]
+position = Vector2(0, 122)
+
 [node name="CanvasLayer" parent="." unique_id=170823451 instance=ExtResource("8_b5655")]
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=2038741618]
+stream = ExtResource("12_ff6um")
+volume_db = -12.322
+autoplay = true
 
 [connection signal="body_entered" from="PortalIslaMain" to="PortalIslaMain" method="_al_entrar_a_la_isla"]
 [connection signal="body_entered" from="PortalIslaMain2" to="PortalIslaMain2" method="_al_entrar_a_la_isla"]
 [connection signal="body_entered" from="PortalIslaMain3" to="PortalIslaMain3" method="_al_entrar_a_la_isla"]
+[connection signal="body_entered" from="PortalIslaMain4" to="PortalIslaMain4" method="_al_entrar_a_la_isla"]
 
 [editable path="Player"]

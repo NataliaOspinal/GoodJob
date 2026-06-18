@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://covlytmxg1ih0" path="res://assets/art/characters/PC.png" id="5_vocr7"]
 [ext_resource type="PackedScene" uid="uid://bnv44x2uf7jtq" path="res://scenes/player.tscn" id="6_bwcjt"]
 [ext_resource type="PackedScene" uid="uid://cc7dhdcunjjl5" path="res://scenes/NPCIsle.tscn" id="7_h3pq8"]
+[ext_resource type="AudioStream" uid="uid://cpiyymthps0o2" path="res://assets/music/Isla4.mp3" id="8_f42gb"]
 [ext_resource type="PackedScene" uid="uid://1wnndddtrrir" path="res://scenes/CanvasLayer.tscn" id="8_qm1f3"]
 [ext_resource type="Texture2D" uid="uid://doraow0uvn8x4" path="res://assets/art/npcs/ChicaMorado.png" id="9_1fhlk"]
 
@@ -777,5 +778,10 @@ shape = SubResource("CapsuleShape2D_2m6dx")
 sprite_frames = SubResource("SpriteFrames_0k7y1")
 
 [node name="CanvasLayer" parent="." unique_id=170823451 instance=ExtResource("8_qm1f3")]
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=260254386]
+stream = ExtResource("8_f42gb")
+volume_db = -15.773
+autoplay = true
 
 [editable path="NpcIsle"]
